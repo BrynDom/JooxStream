@@ -43,10 +43,8 @@ def PlayWrapper(command):
                 ]
             )
             return await message.reply_text(
-                _["general_3"], reply_markup=upl
-          
-            )
-            
+                _["general_3"], reply_markup=upl          
+            )            
            if MUST_JOIN:
             try:
                 await app.get_chat_member(MUST_JOIN, message.from_user.id)
