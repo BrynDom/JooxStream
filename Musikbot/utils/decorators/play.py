@@ -36,7 +36,7 @@ def PlayWrapper(command):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+                            text="How to fix?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -46,6 +46,7 @@ def PlayWrapper(command):
                 _["general_3"], reply_markup=upl
           
             )
+            
            if MUST_JOIN:
             try:
                 await app.get_chat_member(MUST_JOIN, message.from_user.id)
