@@ -4,15 +4,15 @@ from datetime import datetime
 from pyrogram.enums import ChatType
 
 import config
-from AnonXMusic import app
-from AnonXMusic.core.call import Anony, autoend
-from AnonXMusic.utils.database import get_client, is_active_chat, is_autoend
+from Musikbot import app
+from Musikbot.core.call import Anony, autoend
+from Musikbot.utils.database import get_client, is_active_chat, is_autoend
 
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT:
         while not await asyncio.sleep(900):
-            from AnonXMusic.core.userbot import assistants
+            from Musikbot.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)
