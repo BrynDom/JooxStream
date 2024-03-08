@@ -1,8 +1,8 @@
 from strings import get_string
 
-from AnonXMusic import app
-from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import get_lang, is_maintenance
+from Musikbot import app
+from Musikbot.misc import SUDOERS
+from Musikbot.utils.database import get_lang, is_maintenance
 
 
 def language(mystic):
