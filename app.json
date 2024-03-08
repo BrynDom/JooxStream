@@ -32,6 +32,12 @@
         "value": "",
         "required": true
       },
+      "MUST_JOIN": {
+        "description": "Jangan pakai https langsung @",
+        "value": "",
+        "required": true
+      },
+      
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
         "value": "",
