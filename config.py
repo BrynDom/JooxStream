@@ -18,6 +18,10 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
 
+# support group or channels that you want to use for fsub 
+ 
+ MUST_JOIN = getenv("MUST_JOIN"),
+
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
