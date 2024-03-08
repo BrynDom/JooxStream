@@ -2,9 +2,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
-from AnonXMusic import app
-from AnonXMusic.utils.database import get_lang, set_lang
-from AnonXMusic.utils.decorators import ActualAdminCB, language, languageCB
+from Musikbot import app
+from Musikbot.utils.database import get_lang, set_lang
+from Musikbot.utils.decorators import ActualAdminCB, language, languageCB
 from config import BANNED_USERS
 from strings import get_string, languages_present
 
