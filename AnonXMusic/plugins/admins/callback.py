@@ -3,10 +3,10 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from AnonXMusic import YouTube, app
-from AnonXMusic.core.call import Anony
-from AnonXMusic.misc import SUDOERS, db
-from AnonXMusic.utils.database import (
+from Musikbot import YouTube, app
+from Musikbot.core.call import Anony
+from Musikbot.misc import SUDOERS, db
+from Musikbot.utils.database import (
     get_active_chats,
     get_lang,
     get_upvote_count,
@@ -17,11 +17,11 @@ from AnonXMusic.utils.database import (
     music_on,
     set_loop,
 )
-from AnonXMusic.utils.decorators.language import languageCB
-from AnonXMusic.utils.formatters import seconds_to_min
-from AnonXMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
-from AnonXMusic.utils.stream.autoclear import auto_clean
-from AnonXMusic.utils.thumbnails import get_thumb
+from Musikbot.utils.decorators.language import languageCB
+from Musikbot.utils.formatters import seconds_to_min
+from Musikbot.utils.inline import close_markup, stream_markup, stream_markup_timer
+from Musikbot.utils.stream.autoclear import auto_clean
+from Musikbot.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
     SUPPORT_CHAT,
