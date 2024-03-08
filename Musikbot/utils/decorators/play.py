@@ -9,9 +9,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Musikbot import YouTube, app
-from Musikbot.misc import SUDOERS
-from Musikbot.utils.database import (
+from DAXXMUSIC import YouTube, app
+from DAXXMUSIC.misc import SUDOERS
+from DAXXMUSIC.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,8 +20,8 @@ from Musikbot.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from Musikbot.utils.inline import botplaylist_markup
-from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, MUST_JOIN, adminlist
+from DAXXMUSIC.utils.inline import botplaylist_markup
+from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
 from strings import get_string
 
 links = {}
@@ -36,27 +36,13 @@ def PlayWrapper(command):
                 [
                     [
                         InlineKeyboardButton(
-                            text="How to fix?",
-                            callback_data="AnonymousAdmin",
+                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+                            callback_data="DAXXmousAdmin",
                         ),
                     ]
                 ]
             )
-            return await message.reply_text(
-                _["general_3"], reply_markup=upl          
-            )            
-           if MUST_JOIN:
-            try:
-                await app.get_chat_member(MUST_JOIN, message.from_user.id)
-            except UserNotParticipant:
-                sub = await app.export_chat_invite_link(MUST_JOIN)
-                kontol = InlineKeyboardMarkup(
-                    [
-                        [InlineKeyboardButton("Gabung Dulu", url=sub)]
-                    ]
-                )
-                return await message.reply_text(_["force_sub"].format(message.from_user.mention), reply_markup=kontol)
-            
+            return await message.reply_text(_["general_3"], reply_markup=upl)
 
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
@@ -141,7 +127,7 @@ def PlayWrapper(command):
                     return await message.reply_text(
                         _["call_2"].format(
                             app.mention, userbot.id, userbot.name, userbot.username
-                        )
+                        ), reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text= "๏ 𝗨ɴʙᴀɴ 𝗔ssɪsᴛᴀɴᴛ ๏", callback_data=f"unban_assistant")]])
                     )
             except UserNotParticipant:
                 if chat_id in links:
