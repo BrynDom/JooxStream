@@ -13,12 +13,12 @@ from pyrogram import filters
 
 load_dotenv()
 
-from DAXXMUSIC import app
-from DAXXMUSIC.core.call import DAXX
-from DAXXMUSIC.misc import db
-from DAXXMUSIC.utils.database import get_assistant, get_authuser_names, get_cmode
-from DAXXMUSIC.utils.decorators import ActualAdminCB, AdminActual, language
-from DAXXMUSIC.utils.formatters import alpha_to_int, get_readable_time
+from Musikbot import app
+from Musikbot.core.call import DAXX
+from Musikbot.misc import db
+from Musikbot.utils.database import get_assistant, get_authuser_names, get_cmode
+from Musikbot.utils.decorators import ActualAdminCB, AdminActual, language
+from Musikbot.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
