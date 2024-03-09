@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton
 
 import config
-from Musikbot import app
+from DAXXMUSIC import app
 
 
 def start_panel(_):

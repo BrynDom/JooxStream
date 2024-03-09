@@ -2,16 +2,20 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Musikbot import app
+from DAXXMUSIC import app
 
 
 def help_pannel(_, START: Union[bool, int] = None):
     first = [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close")]
     second = [
-        InlineKeyboardButton(
+          InlineKeyboardButton(
             text=_["BACK_BUTTON"],
             callback_data=f"settingsback_helper",
-        ),
+          ),
+          InlineKeyboardButton(
+            text="⚙️ Manage",
+            callback_data=f"mbot_cb",
+        ),       
     ]
     mark = second if START else first
     upl = InlineKeyboardMarkup(

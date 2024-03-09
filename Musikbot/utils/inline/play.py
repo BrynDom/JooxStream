@@ -1,8 +1,8 @@
 import math
 from pyrogram.types import InlineKeyboardButton
-from Musikbot import app
+from DAXXMUSIC import app
 import config
-from Musikbot.utils.formatters import time_to_seconds
+from DAXXMUSIC.utils.formatters import time_to_seconds
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
