@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from DAXXMUSIC import YouTube, app
-from DAXXMUSIC.core.call import DAXX
-from DAXXMUSIC.misc import db
-from DAXXMUSIC.utils.database import get_loop
-from DAXXMUSIC.utils.decorators import AdminRightsCheck
-from DAXXMUSIC.utils.inline import close_markup, stream_markup
-from DAXXMUSIC.utils.stream.autoclear import auto_clean
-from DAXXMUSIC.utils.thumbnails import get_thumb
+from Musikbot import YouTube, app
+from Musikbot.core.call import DAXX
+from Musikbot.misc import db
+from Musikbot.utils.database import get_loop
+from Musikbot.utils.decorators import AdminRightsCheck
+from Musikbot.utils.inline import close_markup, stream_markup
+from Musikbot.utils.stream.autoclear import auto_clean
+from Musikbot.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 
