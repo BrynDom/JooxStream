@@ -1,6 +1,6 @@
 from typing import Union
-from DAXXMUSIC import app
-from DAXXMUSIC.utils.formatters import time_to_seconds
+from Musikbot import app
+from Musikbot.utils.formatters import time_to_seconds
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
