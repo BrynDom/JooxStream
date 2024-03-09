@@ -1,9 +1,10 @@
-from Musikbot.core.bot import Anony
-from Musikbot.core.dir import dirr
-from Musikbot.core.git import git
-from Musikbot.core.userbot import Userbot
-from Musikbot.misc import dbb, heroku
+from DAXXMUSIC.core.bot import DAXX
+from DAXXMUSIC.core.dir import dirr
+from DAXXMUSIC.core.git import git
+from DAXXMUSIC.core.userbot import Userbot
+from DAXXMUSIC.misc import dbb, heroku
 
+from SafoneAPI import SafoneAPI
 from .logging import LOGGER
 
 dirr()
@@ -11,7 +12,8 @@ git()
 dbb()
 heroku()
 
-app = Anony()
+app = DAXX()
+api = SafoneAPI()
 userbot = Userbot()
 
 
