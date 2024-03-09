@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import aiohttp
 import re
 import os
-from DAXXMUSIC import app
+from Musikbot import app
 
 
 @app.on_message(filters.command("tg"))
