@@ -10,15 +10,15 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from DAXXMUSIC import app
-from DAXXMUSIC.misc import HAPP, SUDOERS, XCB
-from DAXXMUSIC.utils.database import (
+from Musikbot import app
+from Musikbot.misc import HAPP, SUDOERS, XCB
+from Musikbot.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from DAXXMUSIC.utils.decorators.language import language
-from DAXXMUSIC.utils.pastebin import DAXXBin
+from Musikbot.utils.decorators.language import language
+from Musikbot.utils.pastebin import DAXXBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
