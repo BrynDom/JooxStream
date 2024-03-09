@@ -1,13 +1,13 @@
 from pyrogram import filters
 import requests, random
 from bs4 import BeautifulSoup
-from DAXXMUSIC import app
+from Musikbot import app
 import pytgcalls
 import os, yt_dlp 
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pytgcalls.types import AudioVideoPiped
-from DAXXMUSIC.plugins.play import play
-from DAXXMUSIC.plugins.play.pornplay import play
+from Musikbot.plugins.play import play
+from Musikbot.plugins.play.pornplay import play
 
 #
 #####
