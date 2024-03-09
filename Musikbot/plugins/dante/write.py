@@ -3,7 +3,7 @@ from pyrogram import *
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from config import  BOT_USERNAME
 from datetime import datetime
-from DAXXMUSIC import app as app
+from Musikbot import app as app
 import requests
 
 @app.on_message(filters.command("write"))
