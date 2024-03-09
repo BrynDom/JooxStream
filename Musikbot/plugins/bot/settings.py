@@ -8,8 +8,8 @@ from pyrogram.types import (
     Message,
 )
 
-from DAXXMUSIC import app
-from DAXXMUSIC.utils.database import (
+from Musikbot import app
+from Musikbot.utils.database import (
     add_nonadmin_chat,
     get_authuser,
     get_authuser_names,
@@ -25,15 +25,15 @@ from DAXXMUSIC.utils.database import (
     skip_off,
     skip_on,
 )
-from DAXXMUSIC.utils.decorators.admins import ActualAdminCB
-from DAXXMUSIC.utils.decorators.language import language, languageCB
-from DAXXMUSIC.utils.inline.settings import (
+from Musikbot.utils.decorators.admins import ActualAdminCB
+from Musikbot.utils.decorators.language import language, languageCB
+from Musikbot.utils.inline.settings import (
     auth_users_markup,
     playmode_users_markup,
     setting_markup,
     vote_mode_markup,
 )
-from DAXXMUSIC.utils.inline.start import private_panel
+from Musikbot.utils.inline.start import private_panel
 from config import BANNED_USERS, OWNER_ID
 
 
