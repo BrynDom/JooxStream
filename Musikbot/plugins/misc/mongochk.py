@@ -2,13 +2,13 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from pymongo import MongoClient
 import re
-from Musikbot import app as DAXX
+from Musikbot import app as Bee
 
 
 mongo_url_pattern = re.compile(r'mongodb(?:\+srv)?:\/\/[^\s]+')
 
 
-@app.on_message(filters.command("mongochk"))
+@Bee.on_message(filters.command("mongochk"))
 async def mongo_command(client, message: Message):
     if len(message.command) < 2:
         await message.reply("Silakan masukkan URL MongoDB Anda setelah perintah. Example: /mongochk your_mongodb_url")
