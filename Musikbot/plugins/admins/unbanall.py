@@ -1,8 +1,8 @@
-from DAXXMUSIC import app
+from Musikbot import app
 from config import OWNER_ID
 from pyrogram import filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from DAXXMUSIC.utils.daxx_ban import admin_filter
+from Musikbot.utils.daxx_ban import admin_filter
 
 BOT_ID = "6974730627"
 
