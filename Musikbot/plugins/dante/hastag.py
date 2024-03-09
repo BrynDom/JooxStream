@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as  BSP
-from DAXXMUSIC import app as DAXX
+from Musikbot import app as DAXX
 from pyrogram import filters
 url = "https://all-hashtag.com/library/contents/ajax_generator.php"
 
