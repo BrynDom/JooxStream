@@ -4,7 +4,7 @@ import pyfiglet
 from random import choice
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 from pyrogram.handlers import MessageHandler
-from DAXXMUSIC import app
+from Musikbot import app
 def figle(text):
     x = pyfiglet.FigletFont.getFonts()
     font = choice(x)
