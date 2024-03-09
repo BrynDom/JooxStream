@@ -14,17 +14,17 @@ from pyrogram.errors import (
     UserIsBlocked,
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from DAXXMUSIC import app
+from Musikbot import app
 from config import BOT_USERNAME
-from DAXXMUSIC.utils.errors import capture_err
+from Musikbot.utils.errors import capture_err
 
-from DAXXMUSIC.utils.files import (
+from Musikbot.utils.files import (
     get_document_from_file_id,
     resize_file_to_sticker_size,
     upload_document,
 )
 
-from DAXXMUSIC.utils.stickerset import (
+from Musikbot.utils.stickerset import (
     add_sticker_to_set,
     create_sticker,
     create_sticker_set,
