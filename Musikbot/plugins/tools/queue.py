@@ -6,12 +6,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from Musikbot import app
-from Musikbot.misc import db
-from Musikbot.utils import AnonyBin, get_channeplayCB, seconds_to_min
-from Musikbot.utils.database import get_cmode, is_active_chat, is_music_playing
-from Musikbot.utils.decorators.language import language, languageCB
-from Musikbot.utils.inline import queue_back_markup, queue_markup
+from DAXXMUSIC import app
+from DAXXMUSIC.misc import db
+from DAXXMUSIC.utils import DAXXBin, get_channeplayCB, seconds_to_min
+from DAXXMUSIC.utils.database import get_cmode, is_active_chat, is_music_playing
+from DAXXMUSIC.utils.decorators.language import language, languageCB
+from DAXXMUSIC.utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
 
 basic = {}
@@ -176,7 +176,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             return await CallbackQuery.edit_message_text(msg, reply_markup=buttons)
         if "✨" in msg:
             msg = msg.replace("✨", "")
-        link = await AnonyBin(msg)
+        link = await DAXXBin(msg)
         med = InputMediaPhoto(media=link, caption=_["queue_3"].format(link))
         await CallbackQuery.edit_message_media(media=med, reply_markup=buttons)
     else:
