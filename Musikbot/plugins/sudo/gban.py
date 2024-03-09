@@ -4,10 +4,10 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from Musikbot import app
-from Musikbot.misc import SUDOERS
-from Musikbot.utils import get_readable_time
-from Musikbot.utils.database import (
+from DAXXMUSIC import app
+from DAXXMUSIC.misc import SUDOERS
+from DAXXMUSIC.utils import get_readable_time
+from DAXXMUSIC.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -15,8 +15,8 @@ from Musikbot.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from Musikbot.utils.decorators.language import language
-from Musikbot.utils.extraction import extract_user
+from DAXXMUSIC.utils.decorators.language import language
+from DAXXMUSIC.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
