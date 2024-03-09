@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from DAXXMUSIC.core.mongo import mongodb
+from Musikbot.core.mongo import mongodb
 
 from .logging import LOGGER
 
