@@ -8,7 +8,7 @@ import yt_dlp
 from urllib.parse import urlparse
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
-from DAXXMUSIC import app, YouTube
+from Musikbot import app, YouTube
 from pyrogram import filters
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -23,9 +23,9 @@ from pyrogram.types import (InlineKeyboardButton,
 
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
-from DAXXMUSIC.utils.decorators.language import language, languageCB
-from DAXXMUSIC.utils.formatters import convert_bytes
-from DAXXMUSIC.utils.inline.song import song_markup
+from Musikbot.utils.decorators.language import language, languageCB
+from Musikbot.utils.formatters import convert_bytes
+from Musikbot.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = ["song"]
