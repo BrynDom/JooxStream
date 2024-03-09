@@ -1,5 +1,5 @@
-from Musikbot import app
-from Musikbot.utils.database import get_cmode
+from DAXXMUSIC import app
+from DAXXMUSIC.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):
