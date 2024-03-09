@@ -1,7 +1,7 @@
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message, User
 
-from Musikbot import app
+from DAXXMUSIC import app
 
 
 async def extract_user(m: Message) -> User:
