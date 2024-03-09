@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from DAXXMUSIC import app
-from DAXXMUSIC.core.call import DAXX
-from DAXXMUSIC.utils.database import set_loop
-from DAXXMUSIC.utils.decorators import AdminRightsCheck
-from DAXXMUSIC.utils.inline import close_markup
+from Musikbot import app
+from Musikbot.core.call import DAXX
+from Musikbot.utils.database import set_loop
+from Musikbot.utils.decorators import AdminRightsCheck
+from Musikbot.utils.inline import close_markup
 from config import BANNED_USERS
 
 
