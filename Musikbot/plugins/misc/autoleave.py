@@ -4,9 +4,9 @@ from datetime import datetime
 from pyrogram.enums import ChatType
 
 import config
-from DAXXMUSIC import app
-from DAXXMUSIC.core.call import DAXX, autoend
-from DAXXMUSIC.utils.database import get_client, is_active_chat, is_autoend
+from Musikbot import app
+from Musikbot.core.call import DAXX, autoend
+from Musikbot.utils.database import get_client, is_active_chat, is_autoend
 
 
 async def auto_leave():
@@ -14,7 +14,7 @@ async def auto_leave():
         while not await asyncio.sleep(
             config.AUTO_LEAVE_ASSISTANT_TIME
         ):
-            from DAXXMUSIC.core.userbot import assistants
+            from Musikbot.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)
