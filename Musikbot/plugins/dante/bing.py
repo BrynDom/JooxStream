@@ -1,4 +1,4 @@
-from DAXXMUSIC import app 
+from Musikbot import app 
 import requests as r
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram import filters 
