@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import requests
-from DAXXMUSIC import app
+from Musikbot import app
 
 ############.....
 
