@@ -17,9 +17,9 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from DAXXMUSIC import LOGGER, YouTube, app
-from DAXXMUSIC.misc import db
-from DAXXMUSIC.utils.database import (
+from Musikbot import LOGGER, YouTube, app
+from Musikbot.misc import db
+from Musikbot.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -31,11 +31,11 @@ from DAXXMUSIC.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from DAXXMUSIC.utils.exceptions import AssistantErr
-from DAXXMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
-from DAXXMUSIC.utils.inline.play import stream_markup
-from DAXXMUSIC.utils.stream.autoclear import auto_clean
-from DAXXMUSIC.utils.thumbnails import get_thumb
+from Musikbot.utils.exceptions import AssistantErr
+from Musikbot.utils.formatters import check_duration, seconds_to_min, speed_converter
+from Musikbot.utils.inline.play import stream_markup
+from Musikbot.utils.stream.autoclear import auto_clean
+from Musikbot.utils.thumbnails import get_thumb
 from strings import get_string
 
 autoend = {}
