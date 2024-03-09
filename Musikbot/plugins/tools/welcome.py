@@ -1,4 +1,4 @@
-from DAXXMUSIC import app
+from Musikbot import app
 from pyrogram.errors import RPCError
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 from os import environ
@@ -16,7 +16,7 @@ from asyncio import sleep
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
 from logging import getLogger
-from DAXXMUSIC.utils.daxx_ban import admin_filter
+from Musikbot.utils.daxx_ban import admin_filter
 from PIL import ImageDraw, Image, ImageFont, ImageChops
 from pyrogram import *
 from pyrogram.types import *
@@ -28,15 +28,15 @@ import os
 import re
 import asyncio
 import time
-from DAXXMUSIC.utils.database import add_served_chat
+from Musikbot.utils.database import add_served_chat
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from DAXXMUSIC.utils.database import get_assistant
+from Musikbot.utils.database import get_assistant
 import asyncio
-from DAXXMUSIC.misc import SUDOERS
-from DAXXMUSIC.mongo.afkdb import PROCESS
+from Musikbot.misc import SUDOERS
+from Musikbot.mongo.afkdb import PROCESS
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
-from DAXXMUSIC import app
+from Musikbot import app
 import asyncio
 import random
 from pyrogram import Client, filters
@@ -47,7 +47,7 @@ from pyrogram.errors import (
     UserAlreadyParticipant,
     UserNotParticipant,
 )
-from DAXXMUSIC.utils.database import get_assistant, is_active_chat
+from Musikbot.utils.database import get_assistant, is_active_chat
 
 
 
@@ -106,13 +106,13 @@ def circle(pfp, size=(500, 500), brightness_factor=10):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
-    background = Image.open("DAXXMUSIC/assets/wel2.png")
+    background = Image.open("Musikbot/assets/wel2.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp, brightness_factor=brightness_factor) 
     pfp = pfp.resize((575, 575))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=70)
-    welcome_font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=61)
+    font = ImageFont.truetype('Musikbot/assets/font.ttf', size=70)
+    welcome_font = ImageFont.truetype('Musikbot/assets/font.ttf', size=61)
     #draw.text((630, 540), f'ID: {id}', fill=(255, 255, 255), font=font)
     #
  #   draw.text((630, 300), f'NAME: {user}', fill=(255, 255, 255), font=font)
@@ -177,7 +177,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 user.photo.big_file_id, file_name=f"pp{user.id}.png"
             )
         except AttributeError:
-            pic = "DAXXMUSIC/assets/upic.png"
+            pic = "Musikbot/assets/upic.png"
         if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
             try:
                 await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
