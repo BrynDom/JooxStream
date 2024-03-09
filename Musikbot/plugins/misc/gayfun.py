@@ -5,7 +5,7 @@ import pyrogram, asyncio, random, time
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
 import requests
-from DAXXMUSIC import app
+from Musikbot import app
 
 def calculate_gay_percentage():
     # Simple random gay percentage calculation for fun
