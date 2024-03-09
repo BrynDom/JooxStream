@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from DAXXMUSIC import app
+from Musikbot import app
 from config import OWNER_ID, BOT_USERNAME
 from pyrogram.types import Message
 
