@@ -2,7 +2,7 @@ import os
 import aiohttp
 import aiofiles
 from aiohttp import ContentTypeError
-from DAXXMUSIC import app as app
+from Musikbot import app as app
 from pyrogram import filters
 
 def check_filename(filroid):
