@@ -8,8 +8,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import *
 
 #BOT FILE NAME
-from DAXXMUSIC import app as app
-from DAXXMUSIC.mongo.couples_db import _get_image, get_couple
+from Musikbot import app as app
+from Musikbot.mongo.couples_db import _get_image, get_couple
 
 POLICE = [
     [
@@ -71,16 +71,16 @@ async def ctest(_, message):
          try:
             p1 = await app.download_media(photo1.big_file_id, file_name="pfp.png")
          except Exception:
-            p1 = "DAXXMUSIC/assets/upic.png"
+            p1 = "Musikbot/assets/upic.png"
          try:
             p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "DAXXMUSIC/assets/upic.png"
+            p2 = "Musikbot/assets/upic.png"
             
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("DAXXMUSIC/assets/cppic.png")
+         img = Image.open("Musikbot/assets/cppic.png")
 
          img1 = img1.resize((437,437))
          img2 = img2.resize((437,437))
