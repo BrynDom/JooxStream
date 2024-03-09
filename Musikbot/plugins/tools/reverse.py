@@ -1,7 +1,7 @@
 from typing import BinaryIO, Dict, List
 import time, os, httpx
 from uuid import uuid4
-from DAXXMUSIC import app
+from Musikbot import app
 from pyrogram.enums import MessageMediaType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pyrogram import Client, filters
