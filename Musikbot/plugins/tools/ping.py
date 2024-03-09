@@ -4,11 +4,11 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
 from config import *
-from DAXXMUSIC import app
-from DAXXMUSIC.core.call import DAXX
-from DAXXMUSIC.utils import bot_sys_stats
-from DAXXMUSIC.utils.decorators.language import language
-from DAXXMUSIC.utils.inline import supp_markup
+from Musikbot import app
+from Musikbot.core.call import DAXX
+from Musikbot.utils import bot_sys_stats
+from Musikbot.utils.decorators.language import language
+from Musikbot.utils.inline import supp_markup
 from config import BANNED_USERS
 
 
