@@ -1,4 +1,4 @@
-from DAXXMUSIC import app
+from Musikbot import app
 from os import environ
 from config import BOT_USERNAME
 import config
@@ -52,8 +52,8 @@ async def get_userinfo_img(
 
 # --------------------------------------------------------------------------------- #
 
-bg_path = "DAXXMUSIC/assets/userinfo.png"
-font_path = "DAXXMUSIC/assets/hiroko.ttf"
+bg_path = "Musikbot/assets/userinfo.png"
+font_path = "Musikbot/assets/hiroko.ttf"
 
 # --------------------------------------------------------------------------------- #
 
