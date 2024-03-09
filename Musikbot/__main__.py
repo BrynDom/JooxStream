@@ -5,11 +5,11 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from Musikbot import LOGGER, app, userbot
-from Musikbot.core.call import Anony
-from Musikbot.misc import sudo
-from Musikbot.plugins import ALL_MODULES
-from Musikbot.utils.database import get_banned_users, get_gbanned
+from DAXXMUSIC import LOGGER, app, userbot
+from DAXXMUSIC.core.call import DAXX
+from DAXXMUSIC.misc import sudo
+from DAXXMUSIC.plugins import ALL_MODULES
+from DAXXMUSIC.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
 
@@ -21,7 +21,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER(__name__).error("Variabel klien asisten tidak ditentukan, sudah keluar...")
+        LOGGER(__name__).error("String sessions failed, silahkan ulang")
         exit()
     await sudo()
     try:
@@ -35,27 +35,27 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("Musikbot.plugins" + all_module)
-    LOGGER("Musikbot.plugins").info("Successfully Imported Modules...")
+        importlib.import_module("DAXXMUSIC.plugins" + all_module)
+    LOGGER("DAXXMUSIC.plugins").info("Moduls Done...")
     await userbot.start()
-    await Anony.start()
+    await DAXX.start()
     try:
-        await Anony.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await DAXX.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
-        LOGGER("Musikbot").error(
-            "Silakan aktifkan obrolan video grup log\nsaluran Anda.\ntidak ada Bot Penghenti..."
+        LOGGER("DAXXMUSIC").error(
+            "Start vidio call group\channels\n\nStop........"
         )
         exit()
     except:
         pass
-    await Anony.decorators()
-    LOGGER("Musikbot").info(
-        "\x41\x6e\x6f\x6e\x58\x20\x4d\x75\x73\x69\x63\x20\x42\x6f\x74\x20\x53\x74\x61\x72\x74\x65\x64\x20\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6c\x6c\x79\x2e\n\n\x44\x6f\x6e'\x74\x20\x66\x6f\x72\x67\x65\x74\x20\x74\x6f\x20\x76\x69\x73\x69\x74\x20\x40\x46\x61\x6c\x6c\x65\x6e\x41\x73\x73\x6f\x63\x69\x61\x74\x69\x6f\x6e"
+    await DAXX.decorators()
+    LOGGER("DAXXMUSIC").info(
+        "By Dante"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("Musikbot").info("Stopping Musicbot...")
+    LOGGER("DAXXMUSIC").info("Stop Music..")
 
 
 if __name__ == "__main__":
