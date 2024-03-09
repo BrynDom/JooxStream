@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from DAXXMUSIC import app
-from DAXXMUSIC.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from DAXXMUSIC.utils.decorators import language
-from DAXXMUSIC.utils.inline.settings import playmode_users_markup
+from Musikbot import app
+from Musikbot.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from Musikbot.utils.decorators import language
+from Musikbot.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
 
 
