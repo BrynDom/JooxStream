@@ -1,13 +1,13 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Musikbot import app
-from Musikbot.core.call import Anony
-from Musikbot.misc import SUDOERS, db
-from Musikbot.utils import AdminRightsCheck
-from Musikbot.utils.database import is_active_chat, is_nonadmin_chat
-from Musikbot.utils.decorators.language import languageCB
-from Musikbot.utils.inline import close_markup, speed_markup
+from DAXXMUSIC import app
+from DAXXMUSIC.core.call import DAXX
+from DAXXMUSIC.misc import SUDOERS, db
+from DAXXMUSIC.utils import AdminRightsCheck
+from DAXXMUSIC.utils.database import is_active_chat, is_nonadmin_chat
+from DAXXMUSIC.utils.decorators.language import languageCB
+from DAXXMUSIC.utils.inline import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
 
 checker = []
@@ -94,7 +94,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_32"].format(CallbackQuery.from_user.mention),
     )
     try:
-        await Anony.speedup_stream(
+        await DAXX.speedup_stream(
             chat_id,
             file_path,
             speed,
@@ -109,4 +109,4 @@ async def del_back_playlist(client, CallbackQuery, _):
     await mystic.edit_text(
         text=_["admin_34"].format(speed, CallbackQuery.from_user.mention),
         reply_markup=close_markup(_),
-    )
+  )

@@ -1,12 +1,12 @@
 import asyncio
-
+from telegram import CallbackQuery
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Musikbot import YouTube, app
-from Musikbot.core.call import Anony
-from Musikbot.misc import SUDOERS, db
-from Musikbot.utils.database import (
+from DAXXMUSIC import YouTube, app
+from DAXXMUSIC.core.call import DAXX
+from DAXXMUSIC.misc import SUDOERS, db
+from DAXXMUSIC.utils.database import (
     get_active_chats,
     get_lang,
     get_upvote_count,
@@ -17,14 +17,20 @@ from Musikbot.utils.database import (
     music_on,
     set_loop,
 )
-from Musikbot.utils.decorators.language import languageCB
-from Musikbot.utils.formatters import seconds_to_min
-from Musikbot.utils.inline import close_markup, stream_markup, stream_markup_timer
-from Musikbot.utils.stream.autoclear import auto_clean
-from Musikbot.utils.thumbnails import get_thumb
+from pyrogram.errors import (
+    ChatAdminRequired,
+    InviteRequestSent,
+    UserAlreadyParticipant,
+    UserNotParticipant,
+)
+from DAXXMUSIC.utils.database import get_assistant
+from DAXXMUSIC.utils.decorators.language import languageCB
+from DAXXMUSIC.utils.formatters import seconds_to_min
+from DAXXMUSIC.utils.inline import close_markup, stream_markup, stream_markup_timer
+from DAXXMUSIC.utils.stream.autoclear import auto_clean
+from DAXXMUSIC.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
-    SUPPORT_CHAT,
     SOUNCLOUD_IMG_URL,
     STREAM_IMG_URL,
     TELEGRAM_AUDIO_URL,
@@ -37,6 +43,19 @@ from strings import get_string
 
 checker = {}
 upvoters = {}
+
+
+
+@app.on_callback_query(filters.regex("unban_assistant"))
+async def unban_assistant(_, callback: CallbackQuery):
+    chat_id = callback.message.chat.id
+    userbot = await get_assistant(chat_id)
+    
+    try:
+        await app.unban_chat_member(chat_id, userbot.id)
+        await callback.answer("Assisten berhasil diunban🥳\n\nSekrang Kamu bisa memutar musik 🔉\n\nTerima kasih", show_alert=True)
+    except Exception as e:
+        await callback.answer(f"Gagal membatalkan pemblokiran asisten saya karena saya tidak mempunyai hak pelarangan\n\n tolong berikan saya kekuatan pelarangan sehingga saya dapat membatalkan pelarangan asisten saya", show_alert=True)
 
 
 @app.on_callback_query(filters.regex("ADMIN") & ~BANNED_USERS)
@@ -136,7 +155,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_1"], show_alert=True)
         await CallbackQuery.answer()
         await music_off(chat_id)
-        await Anony.pause_stream(chat_id)
+        await DAXX.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_2"].format(mention), reply_markup=close_markup(_)
         )
@@ -145,13 +164,13 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_3"], show_alert=True)
         await CallbackQuery.answer()
         await music_on(chat_id)
-        await Anony.resume_stream(chat_id)
+        await DAXX.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_4"].format(mention), reply_markup=close_markup(_)
         )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
-        await Anony.stop_stream(chat_id)
+        await DAXX.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
             _["admin_5"].format(mention), reply_markup=close_markup(_)
@@ -160,7 +179,7 @@ async def del_back_playlist(client, CallbackQuery, _):
     elif command == "Skip" or command == "Replay":
         check = db.get(chat_id)
         if command == "Skip":
-            txt = f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ\n│ \n└ʙʏ : {mention} "
             popped = None
             try:
                 popped = check.pop(0)
@@ -168,7 +187,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     await auto_clean(popped)
                 if not check:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ\n│ \n└ʙʏ : {mention} "
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -177,13 +196,13 @@ async def del_back_playlist(client, CallbackQuery, _):
                         reply_markup=close_markup(_),
                     )
                     try:
-                        return await Anony.stop_stream(chat_id)
+                        return await DAXX.stop_stream(chat_id)
                     except:
                         return
             except:
                 try:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ\n│ \n└ʙʏ : {mention} "
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -191,11 +210,11 @@ async def del_back_playlist(client, CallbackQuery, _):
                         ),
                         reply_markup=close_markup(_),
                     )
-                    return await Anony.stop_stream(chat_id)
+                    return await DAXX.stop_stream(chat_id)
                 except:
                     return
         else:
-            txt = f"➻ sᴛʀᴇᴀᴍ ʀᴇ-ᴘʟᴀʏᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"➻ sᴛʀᴇᴀᴍ ʀᴇ-ᴘʟᴀʏᴇᴅ\n│ \n└ʙʏ : {mention} "
         await CallbackQuery.answer()
         queued = check[0]["file"]
         title = (check[0]["title"]).title()
@@ -223,7 +242,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 image = None
             try:
-                await Anony.skip_stream(chat_id, link, video=status, image=image)
+                await DAXX.skip_stream(chat_id, link, video=status, image=image)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -259,7 +278,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 image = None
             try:
-                await Anony.skip_stream(chat_id, file_path, video=status, image=image)
+                await DAXX.skip_stream(chat_id, file_path, video=status, image=image)
             except:
                 return await mystic.edit_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -280,7 +299,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await mystic.delete()
         elif "index_" in queued:
             try:
-                await Anony.skip_stream(chat_id, videoid, video=status)
+                await DAXX.skip_stream(chat_id, videoid, video=status)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -303,7 +322,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 except:
                     image = None
             try:
-                await Anony.skip_stream(chat_id, queued, video=status, image=image)
+                await DAXX.skip_stream(chat_id, queued, video=status, image=image)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             if videoid == "telegram":
@@ -326,7 +345,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     if str(streamtype) == "audio"
                     else TELEGRAM_VIDEO_URL,
                     caption=_["stream_1"].format(
-                        SUPPORT_CHAT, title[:23], duration, user
+                        config.SUPPORT_CHAT, title[:23], duration, user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )

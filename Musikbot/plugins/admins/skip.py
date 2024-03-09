@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from Musikbot import YouTube, app
-from Musikbot.core.call import Anony
-from Musikbot.misc import db
-from Musikbot.utils.database import get_loop
-from Musikbot.utils.decorators import AdminRightsCheck
-from Musikbot.utils.inline import close_markup, stream_markup
-from Musikbot.utils.stream.autoclear import auto_clean
-from Musikbot.utils.thumbnails import get_thumb
+from DAXXMUSIC import YouTube, app
+from DAXXMUSIC.core.call import DAXX
+from DAXXMUSIC.misc import db
+from DAXXMUSIC.utils.database import get_loop
+from DAXXMUSIC.utils.decorators import AdminRightsCheck
+from DAXXMUSIC.utils.inline import close_markup, stream_markup
+from DAXXMUSIC.utils.stream.autoclear import auto_clean
+from DAXXMUSIC.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 
@@ -48,7 +48,7 @@ async def skip(cli, message: Message, _, chat_id):
                                         ),
                                         reply_markup=close_markup(_),
                                     )
-                                    await Anony.stop_stream(chat_id)
+                                    await DAXX.stop_stream(chat_id)
                                 except:
                                     return
                                 break
@@ -75,7 +75,7 @@ async def skip(cli, message: Message, _, chat_id):
                     reply_markup=close_markup(_),
                 )
                 try:
-                    return await Anony.stop_stream(chat_id)
+                    return await DAXX.stop_stream(chat_id)
                 except:
                     return
         except:
@@ -86,7 +86,7 @@ async def skip(cli, message: Message, _, chat_id):
                     ),
                     reply_markup=close_markup(_),
                 )
-                return await Anony.stop_stream(chat_id)
+                return await DAXX.stop_stream(chat_id)
             except:
                 return
     queued = check[0]["file"]
@@ -111,7 +111,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             image = None
         try:
-            await Anony.skip_stream(chat_id, link, video=status, image=image)
+            await DAXX.skip_stream(chat_id, link, video=status, image=image)
         except:
             return await message.reply_text(_["call_6"])
         button = stream_markup(_, chat_id)
@@ -144,7 +144,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             image = None
         try:
-            await Anony.skip_stream(chat_id, file_path, video=status, image=image)
+            await DAXX.skip_stream(chat_id, file_path, video=status, image=image)
         except:
             return await mystic.edit_text(_["call_6"])
         button = stream_markup(_, chat_id)
@@ -164,7 +164,7 @@ async def skip(cli, message: Message, _, chat_id):
         await mystic.delete()
     elif "index_" in queued:
         try:
-            await Anony.skip_stream(chat_id, videoid, video=status)
+            await DAXX.skip_stream(chat_id, videoid, video=status)
         except:
             return await message.reply_text(_["call_6"])
         button = stream_markup(_, chat_id)
@@ -186,7 +186,7 @@ async def skip(cli, message: Message, _, chat_id):
             except:
                 image = None
         try:
-            await Anony.skip_stream(chat_id, queued, video=status, image=image)
+            await DAXX.skip_stream(chat_id, queued, video=status, image=image)
         except:
             return await message.reply_text(_["call_6"])
         if videoid == "telegram":
