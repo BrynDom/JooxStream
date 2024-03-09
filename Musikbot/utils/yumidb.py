@@ -5,10 +5,10 @@ from pyrogram import Client
 from pyrogram.types import Message
 from pyrogram.enums import ChatMemberStatus, ChatType
 
-from DAXXMUSIC import app
+from Musikbot import app
 
 from config import OWNER_ID, BOT_USERNAME
-from DAXXMUSIC.misc import SUDOERS
+from Musikbot.misc import SUDOERS
 
 COMMANDERS = [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]
 
