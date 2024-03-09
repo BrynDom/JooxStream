@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import requests
-from DAXXMUSIC import app
+from Musikbot import app
 
 # Function to chunk the repository info into smaller parts
 def chunk_string(text, chunk_size):
