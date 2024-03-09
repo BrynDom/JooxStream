@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import requests
-from DAXXMUSIC import app
+from Musikbot import app
 
 
 TMDB_API_KEY = "23c3b139c6d59ebb608fe6d5b974d888"
