@@ -4,9 +4,9 @@ import speedtest
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Musikbot import app
-from Musikbot.misc import SUDOERS
-from Musikbot.utils.decorators.language import language
+from DAXXMUSIC import app
+from DAXXMUSIC.misc import SUDOERS
+from DAXXMUSIC.utils.decorators.language import language
 
 
 def testspeed(m, _):
@@ -25,8 +25,8 @@ def testspeed(m, _):
     return result
 
 
-@app.on_message(filters.command(["speedtest", "spt"]) & SUDOERS)
-@language
+@app.on_message(filters.command(["speedtest", "spt"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & SUDOERS)
+@language 
 async def speedtest_function(client, message: Message, _):
     m = await message.reply_text(_["server_11"])
     loop = asyncio.get_event_loop()
