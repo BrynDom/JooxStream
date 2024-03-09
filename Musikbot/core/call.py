@@ -17,9 +17,9 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from Musikbot import LOGGER, YouTube, app
-from Musikbot.misc import db
-from Musikbot.utils.database import (
+from DAXXMUSIC import LOGGER, YouTube, app
+from DAXXMUSIC.misc import db
+from DAXXMUSIC.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -31,11 +31,11 @@ from Musikbot.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from Musikbot.utils.exceptions import AssistantErr
-from Musikbot.utils.formatters import check_duration, seconds_to_min, speed_converter
-from Musikbot.utils.inline.play import stream_markup
-from Musikbot.utils.stream.autoclear import auto_clean
-from Musikbot.utils.thumbnails import get_thumb
+from DAXXMUSIC.utils.exceptions import AssistantErr
+from DAXXMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
+from DAXXMUSIC.utils.inline.play import stream_markup
+from DAXXMUSIC.utils.stream.autoclear import auto_clean
+from DAXXMUSIC.utils.thumbnails import get_thumb
 from strings import get_string
 
 autoend = {}
@@ -51,7 +51,7 @@ async def _clear_(chat_id):
 class Call(PyTgCalls):
     def __init__(self):
         self.userbot1 = Client(
-            name="AnonXAss1",
+            name="DAXXAss1",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING1),
@@ -61,7 +61,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot2 = Client(
-            name="AnonXAss2",
+            name="DAXXAss2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
@@ -71,7 +71,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot3 = Client(
-            name="AnonXAss3",
+            name="DAXXXAss3",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
@@ -81,7 +81,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot4 = Client(
-            name="AnonXAss4",
+            name="DAXXXAss4",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
@@ -91,7 +91,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot5 = Client(
-            name="AnonXAss5",
+            name="DAXXAss5",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),
@@ -598,4 +598,4 @@ class Call(PyTgCalls):
             await self.change_stream(client, update.chat_id)
 
 
-Anony = Call()
+DAXX = Call()

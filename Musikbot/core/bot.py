@@ -6,16 +6,15 @@ import config
 from ..logging import LOGGER
 
 
-class Anony(Client):
+class DAXX(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot...")
         super().__init__(
-            name="Musikbot",
+            name="DAXXMUSIC",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
             in_memory=True,
-            parse_mode=ParseMode.HTML,
             max_concurrent_transmissions=7,
         )
 
@@ -45,7 +44,7 @@ class Anony(Client):
         a = await self.get_chat_member(config.LOGGER_ID, self.id)
         if a.status != ChatMemberStatus.ADMINISTRATOR:
             LOGGER(__name__).error(
-                "Please promote your bot as an admin in your log group/channel."
+                "Silakan promosikan bot Anda sebagai admin di grup/saluran log Anda."
             )
             exit()
         LOGGER(__name__).info(f"Music Bot Started as {self.name}")
