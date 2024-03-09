@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 import requests
 import json
-from DAXXMUSIC import app
+from Musikbot import app
 
 def send_message(message, text):
     message.reply_text(text)
