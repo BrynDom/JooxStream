@@ -61,14 +61,14 @@ font_path = "Musikbot/assets/hiroko.ttf"
 chat_id_env = environ.get("CHAT_ID")
 CHAT_ID = [int(app) for app in chat_id_env.split(",")] if chat_id_env else []
 
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "**ʜᴇʏ {mention}**\n\n**ᴡᴇʟᴄᴏᴍᴇ ɪɴ ɴᴇᴡ ɢʀᴏᴜᴘ**\n\n**➻** {title}\n\n**ɴᴏᴡ ᴍᴀᴋᴇ ɴᴇᴡ ғʀɪᴇɴᴅs ᴀɴᴅ sᴛᴀʏ ᴀʟᴡᴀʏs ᴏɴʟɪɴᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ**")
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "**Halo {mention}**\n\n**selamat datang di grup {title}**\n\n**semoga betah disini.**")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 # List of random photo links
 random_photo_links = [
-    "https://telegra.ph/file/ca950c0b8316b968957fa.jpg",
-    "https://telegra.ph/file/ca950c0b8316b968957fa.jpg",
-    "https://telegra.ph/file/ca950c0b8316b968957fa.jpg",
+    "https://mallucampaign.in/images/img_1710090470.jpg",
+    "https://mallucampaign.in/images/img_1710090470.jpg",
+    "https://mallucampaign.in/images/img_1710090470.jpg",
     # Add more links as needed
 ]
 
@@ -91,7 +91,7 @@ async def autoapprove(client: app, message: ChatJoinRequest):
         profile_path=photo,
     )
 
-    print(f"{user.first_name} Joined 🤝")  # Logs
+    print(f"{user.first_name} bergabung")  # Logs
 
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
 
