@@ -52,11 +52,9 @@ from Musikbot.utils.database import get_assistant, is_active_chat
 
 
 random_photo = [
-    "https://telegra.ph/file/1949480f01355b4e87d26.jpg",
-    "https://telegra.ph/file/3ef2cc0ad2bc548bafb30.jpg",
-    "https://telegra.ph/file/a7d663cd2de689b811729.jpg",
-    "https://telegra.ph/file/6f19dc23847f5b005e922.jpg",
-    "https://telegra.ph/file/2973150dd62fd27a3a6ba.jpg",
+    "https://mallucampaign.in/images/img_1709443187.jpg",
+    "https://mallucampaign.in/images/img_1710060854.jpg",
+    "https://mallucampaign.in/images/img_1710060870.jpg",
 ]
 # --------------------------------------------------------------------------------- #
 
@@ -129,7 +127,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
 
 @app.on_message(filters.command("welcome") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**ᴜsᴀɢᴇ:**\n**⦿ /welcome [on|off]**"
+    usage = "**Usage:**\n**/welcome [on|off]**"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -142,20 +140,20 @@ async def auto_state(_, message):
         state = message.text.split(None, 1)[1].strip().lower()
         if state == "off":
             if A:
-                await message.reply_text("**ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ !**")
+                await message.reply_text("**Pesan selamat datang berhasil di matikan!**")
             else:
                 await wlcm.add_wlcm(chat_id)
-                await message.reply_text(f"**ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title}")
+                await message.reply_text(f"**Pesan selamat datang tidak akan muncul di** {message.chat.title}")
         elif state == "on":
             if not A:
-                await message.reply_text("**ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.**")
+                await message.reply_text("**Pesan selamat datang berhasil di hidupkan**")
             else:
                 await wlcm.rm_wlcm(chat_id)
-                await message.reply_text(f"**ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ ** {message.chat.title}")
+                await message.reply_text(f"**Berhasil menghidupkan pesan selamat datang dengan notifikasi** {message.chat.title}")
         else:
             await message.reply_text(usage)
     else:
-        await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!**")
+        await message.reply("**Hanya admin yang berhak menghidupkan pesan selamat datang!**")
 
 
 
@@ -187,7 +185,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             welcomeimg = welcomepic(
                 pic, user.first_name, member.chat.title, user.id, user.username
             )
-            button_text = "ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ"
+            button_text = "Lihat Members"
             add_button_text = "ɪɴғᴏ"
             deep_link = f"tg://openmessage?user_id={user.id}"
             add_link = f"https://t.me/{app.username}?startgroup=true"
@@ -195,12 +193,12 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**ᴡᴇʟᴄᴏᴍᴇ**
+**Hi selamat Datang**
 
-**ɴᴀᴍᴇ :** {user.mention}
-**ɪᴅ :** `{user.id}`
-**ᴜ_ɴᴀᴍᴇ :** @{user.username}
-**ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs :** {count}
+**Nama :** {user.mention}
+**Id :** `{user.id}`
+**Username :** @{user.username}
+**Total members :** {count}
 
 """,
                 reply_markup=InlineKeyboardMarkup([
@@ -212,11 +210,11 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             LOGGER.error(e)
 
 
-@app.on_message(filters.command("gadd") & filters.user(6664582540))
+@app.on_message(filters.command("gadd") & filters.user(940232666))
 async def add_all(client, message):
     command_parts = message.text.split(" ")
     if len(command_parts) != 2:
-        await message.reply("**⚠️ ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀᴍᴀᴛ. ᴘʟᴇᴀsᴇ ᴜsᴇ ʟɪᴋᴇ » `/gadd bot username`**")
+        await message.reply("**format perintah tidak valid, silakan gunakan `/gadd bot username`**")
         return
     
     bot_username = command_parts[1]
@@ -226,7 +224,7 @@ async def add_all(client, message):
         app_id = bot.id
         done = 0
         failed = 0
-        lol = await message.reply("🔄 **ᴀᴅᴅɪɴɢ ɢɪᴠᴇɴ ʙᴏᴛ ɪɴ ᴀʟʟ ᴄʜᴀᴛs!**")
+        lol = await message.reply(" **Menambahkan bot yang diberikan ke semua obrolan**")
         
         async for dialog in userbot.get_dialogs():
             if dialog.chat.id == -1001919135283:
@@ -235,17 +233,17 @@ async def add_all(client, message):
                 await userbot.add_chat_members(dialog.chat.id, app_id)
                 done += 1
                 await lol.edit(
-                    f"**🔂 ᴀᴅᴅɪɴɢ {bot_username}**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅᴇᴅ ʙʏ»** @{userbot.username}"
+                    f"**Menambahkan {bot_username}**\n\n**Menambahkan {done} Chats**\n**➥ Gagal masuk {failed} Chats ❌**\n\n**Ditambahkan Oleh** @{userbot.username}"
                 )
             except Exception as e:
                 failed += 1
                 await lol.edit(
-                    f"**🔂 ᴀᴅᴅɪɴɢ {bot_username}**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅɪɴɢ ʙʏ»** @{userbot.username}"
+                    f"**Menambahkan {bot_username}**\n\n**Menambahkan {done} Chat ✅**\n**Gagal Menambahkan {failed} Chat ❌**\n\n**Ditambahkan oleh** @{userbot.username}"
                 )
             await asyncio.sleep(3)  # Adjust sleep time based on rate limits
         
         await lol.edit(
-            f"**➻ {bot_username} ʙᴏᴛ ᴀᴅᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ🎉**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅᴇᴅ ʙʏ»** @{userbot.username}"
+            f"**{bot_username} Bot berhasil ditambahkan **\n\n**Menambahkan {done} Chat ✅**\n**Gagal Menambahkan {failed} Chats❌**\n\n**Ditambahkan Oleh** @{userbot.username}"
         )
     except Exception as e:
         await message.reply(f"Error: {str(e)}")
