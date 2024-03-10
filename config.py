@@ -147,16 +147,16 @@ START_IMG_URL = getenv(
 PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://mallucampaign.in/images/img_1708914936.jpg"
 )
-PLAYLIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/d30d11c4365c025c25e3e.jpg"
-TELEGRAM_AUDIO_URL = "https://telegra.ph/file/48f39202823b358203234.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/e575ae40d6635250974e1.jpg"
-STREAM_IMG_URL = "https://telegra.ph/file/03efec694e41e891b29dc.jpg"
-SOUNCLOUD_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph/file/4dc854f961cd3ce46899b.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
+PLAYLIST_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+STATS_IMG_URL = "https://mallucampaign.in/images/img_1710090490.jpg"
+TELEGRAM_AUDIO_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+TELEGRAM_VIDEO_URL = "https://mallucampaign.in/images/img_1710090490.jpg"
+STREAM_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+SOUNCLOUD_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+YOUTUBE_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
 
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
