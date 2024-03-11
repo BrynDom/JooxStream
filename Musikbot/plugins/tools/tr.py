@@ -32,7 +32,7 @@ async def translate(_, message) -> None:
         dest = "en"
     translation = await trans(to_translate, sourcelang=source, targetlang=dest)
     reply = (
-        f"ᴛʀᴀɴsʟᴀᴛᴇᴅ ғʀᴏᴍ {source} to {dest}:\n"
+        f"Teranslete Dari {source} Ke {dest}:\n"
         f"{translation.text}"
     )
     await message.reply_text(reply)
