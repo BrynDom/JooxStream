@@ -20,18 +20,18 @@ async def check_ccbin(client, message):
     try:
         resp = await api.bininfo(bin)
         await aux.edit(f"""
-<b> 𝗩𝗔𝗟𝗜𝗗 𝗕𝗜𝗡 ✅</b>
+<b> TEMPAT YANG VALID  ✅</b>
 
-<b>🏦 𝗕𝗔𝗡𝗞➪</b> <tt>{resp.bank}</tt>
-<b>💳 𝗕𝗜𝗡➪</b> <tt>{resp.bin}</tt>
-<b>🏡 𝗖𝗢𝗨𝗡𝗧𝗥𝗬➪</b> <tt>{resp.country}</tt>
-<b>🇮🇳 𝗙𝗟𝗔𝗚➪</b> <tt>{resp.flag}</tt>
-<b>🧿 𝗜𝗦𝗢➪</b> <tt>{resp.iso}</tt>
-<b>⏳ 𝗟𝗘𝗩𝗘𝗟➪</b> <tt>{resp.level}</tt>
-<b>🔴 𝗣𝗥𝗘𝗣𝗔𝗜𝗗➪</b> <tt>{resp.prepaid}</tt>
-<b>🆔 𝗧𝗬𝗣𝗘➪</b> <tt>{resp.type}</tt>
-<b>ℹ️ 𝗩𝗘𝗡𝗗𝗢𝗥➪</b> <tt>{resp.vendor}</tt>"""
+<b>🏦 BANK</b> <tt>{resp.bank}</tt>
+<b>💳 BIN</b> <tt>{resp.bin}</tt>
+<b>🏡 NEGARA </b> <tt>{resp.country}</tt>
+<b>BENDERA </b> <tt>{resp.flag}</tt>
+<b>ISO</b> <tt>{resp.iso}</tt>
+<b>LEVEL/b> <tt>{resp.level}</tt>
+<b>PREPAID </b> <tt>{resp.prepaid}</tt>
+<b>TYPE </b> <tt>{resp.type}</tt>
+<b>VENDOR </b> <tt>{resp.vendor}</tt>"""
         )
     except:
         return await aux.edit(f"""
-🚫 BIN not recognized. Please enter a valid BIN.""")
+🚫 BIN tidak dikenali. Silakan masukkan BIN yang valid.""")
