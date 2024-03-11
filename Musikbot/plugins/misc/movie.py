@@ -19,9 +19,9 @@ async def movie_command(client, message):
             # Send the movie information as a reply
             await message.reply_text(movie_info)
         else:
-            await message.reply_text("Please enter a movie name after the /movie command.")
+            await message.reply_text("Silakan masukkan nama film setelah perintah /movie.")
     except Exception as e:
-        await message.reply_text(f"An error occurred: {str(e)}")
+        await message.reply_text(f"Terjadi kesalahan: {str(e)}")
 
 def get_movie_info(movie_name):
     tmdb_api_url = f"https://api.themoviedb.org/3/search/movie"
@@ -69,4 +69,4 @@ def get_movie_info(movie_name):
         )
         return info
     else:
-        return "Movie not found or API request failed."
+        return "Film tidak ditemukan atau permintaan API gagal."
