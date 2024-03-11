@@ -13,7 +13,7 @@ SPAM_CHATS = []
 async def tag_all_users(_,message): 
     replied = message.reply_to_message  
     if len(message.command) < 2 and not replied:
-        await message.reply_text("**ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ**") 
+        await message.reply_text("**Replay ke pesan yang ingin anda tagallm/mention**") 
         return                  
     if replied:
         SPAM_CHATS.append(message.chat.id)      
@@ -23,7 +23,7 @@ async def tag_all_users(_,message):
             if message.chat.id not in SPAM_CHATS:
                 break       
             usernum += 5
-            usertxt += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
+            usertxt += f"\n[{m.user.first_name}](tg://user?id={m.user.id})\n"
             if usernum == 1:
                 await replied.reply_text(usertxt)
                 await asyncio.sleep(2)
@@ -62,8 +62,8 @@ async def cancelcmd(_, message):
             SPAM_CHATS.remove(chat_id)
         except Exception:
             pass   
-        return await message.reply_text("**ᴛᴀɢ ᴀʟʟ sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴏᴘᴘᴇᴅ!**")     
+        return await message.reply_text("**Tagall berhasil di berhentikan!**")     
                                      
     else :
-        await message.reply_text("**ɴᴏ ᴘʀᴏᴄᴇss ᴏɴɢᴏɪɴɢ!**")  
+        await message.reply_text("**Tidak ada proses yg sedang berlangsung!!**")  
         return       
