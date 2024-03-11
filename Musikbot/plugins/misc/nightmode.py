@@ -29,11 +29,11 @@ OPEN_CHAT = ChatPermissions(
     can_pin_messages = True,
     can_invite_users = True )
     
-buttons = InlineKeyboardMarkup([[InlineKeyboardButton("๏ ᴇɴᴀʙʟᴇ ๏", callback_data="add_night"),InlineKeyboardButton("๏ ᴅɪsᴀʙʟᴇ ๏", callback_data="rm_night")]])         
+buttons = InlineKeyboardMarkup([[InlineKeyboardButton("Enable", callback_data="add_night"),InlineKeyboardButton("Disable", callback_data="rm_night")]])         
 
 @app.on_message(filters.command("nightmode") & filters.group)
 async def _nightmode(_, message):
-    return await message.reply_photo(photo="https://telegra.ph//file/06649d4d0bbf4285238ee.jpg", caption="**ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴇɴᴀʙʟᴇ ᴏʀ ᴅɪsᴀʙʟᴇ ɴɪɢʜᴛᴍᴏᴅᴇ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**",reply_markup=buttons)
+    return await message.reply_photo(photo="https://mallucampaign.in/images/img_1710090470.jpg", caption="**Silahkan klik tombol diatas mode malam mau di aktifkan apa tidak..**",reply_markup=buttons)
               
      
 @app.on_callback_query(filters.regex("^(add_night|rm_night)$"))
@@ -48,16 +48,16 @@ async def nightcb(_, query : CallbackQuery):
     if user_id in administrators:   
         if data == "add_night":
             if check_night:        
-                await query.message.edit_caption("**๏ ɴɪɢʜᴛᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**")
+                await query.message.edit_caption("**Mode malam berhasil di aktifkan di group chat.**")
             elif not check_night :
                 await nightmode_on(chat_id)
-                await query.message.edit_caption("**๏ ᴀᴅᴅᴇᴅ ᴄʜᴀᴛ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ . ᴛʜɪs ɢʀᴏᴜᴘ ᴡɪʟʟ ʙᴇ ᴄʟᴏsᴇᴅ ᴏɴ 𝟷𝟸ᴀᴍ [IST] ᴀɴᴅ ᴡɪʟʟ ᴏᴘᴇɴᴇᴅ ᴏɴ 𝟶𝟼ᴀᴍ [IST] .**") 
+                await query.message.edit_caption("**Tambahkan obrolan ke database saya. grup ini akan ditutup pada pukul 12 pagi [IST] dan akan dibuka pada pukul 06 pagi [IST] .**") 
         if data == "rm_night":
             if check_night:  
                 await nightmode_off(chat_id)      
-                await query.message.edit_caption("**๏ ɴɪɢʜᴛᴍᴏᴅᴇ ʀᴇᴍᴏᴠᴇᴅ ғʀᴏᴍ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ !**")
+                await query.message.edit_caption("**Mode malam  dihapus dari database saya!**")
             elif not check_night:
-                await query.message.edit_caption("**๏  ɴɪɢʜᴛᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ  ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**") 
+                await query.message.edit_caption("**Mode malam sudah dinonaktifkan dalam obrolan ini**") 
             
     
     
@@ -72,7 +72,7 @@ async def start_nightmode() :
         try:
             await app.send_photo(
                 add_chat,
-                photo="https://telegra.ph//file/06649d4d0bbf4285238ee.jpg",
+                photo="https://mallucampaign.in/images/img_1710090470.jpg",
                 caption= f"**ᴍᴀʏ ᴛʜᴇ ᴀɴɢᴇʟs ғʀᴏᴍ ʜᴇᴀᴠᴇɴ ʙʀɪɴɢ ᴛʜᴇ sᴡᴇᴇᴛᴇsᴛ ᴏғ ᴀʟʟ ᴅʀᴇᴀᴍs ғᴏʀ ʏᴏᴜ. ᴍᴀʏ ʏᴏᴜ ʜᴀᴠᴇ ʟᴏɴɢ ᴀɴᴅ ʙʟɪssғᴜʟ sʟᴇᴇᴘ ғᴜʟʟ ᴏғ ʜᴀᴘᴘʏ ᴅʀᴇᴀᴍs.\n\nɢʀᴏᴜᴘ ɪs ᴄʟᴏsɪɴɢ ɢᴏᴏᴅ ɴɪɢʜᴛ ᴇᴠᴇʀʏᴏɴᴇ  !**")
             
             await app.set_chat_permissions(add_chat,CLOSE_CHAT)
@@ -95,7 +95,7 @@ async def close_nightmode():
         try:
             await app.send_photo(
                 rm_chat,
-                photo="https://telegra.ph//file/14ec9c3ff42b59867040a.jpg",
+                photo="https://mallucampaign.in/images/img_1710090470.jpg",
                 caption= f"**ɢʀᴏᴜᴘ ɪs ᴏᴘᴇɴɪɴɢ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴇᴠᴇʀʏᴏɴᴇ !\n\nᴍᴀʏ ᴛʜɪs ᴅᴀʏ ᴄᴏᴍᴇ ᴡɪᴛʜ ᴀʟʟ ᴛʜᴇ ʟᴏᴠᴇ ʏᴏᴜʀ ʜᴇᴀʀᴛ ᴄᴀɴ ʜᴏʟᴅ ᴀɴᴅ ʙʀɪɴɢ ʏᴏᴜ ᴇᴠᴇʀʏ sᴜᴄᴄᴇss ʏᴏᴜ ᴅᴇsɪʀᴇ. Mᴀʏ ᴇᴀᴄʜ ᴏғ ʏᴏᴜʀ ғᴏᴏᴛsᴛᴇᴘs ʙʀɪɴɢ Jᴏʏ ᴛᴏ ᴛʜᴇ ᴇᴀʀᴛʜ ᴀɴᴅ ʏᴏᴜʀsᴇʟғ. ɪ ᴡɪsʜ ʏᴏᴜ ᴀ ᴍᴀɢɪᴄᴀʟ ᴅᴀʏ ᴀɴᴅ ᴀ ᴡᴏɴᴅᴇʀғᴜʟ ʟɪғᴇ ᴀʜᴇᴀᴅ.**")
             
             await app.set_chat_permissions(rm_chat,OPEN_CHAT)
