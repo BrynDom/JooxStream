@@ -25,7 +25,7 @@ async def bugs(_, msg: Message):
     if msg.chat.username:
         chat_username = f"@{msg.chat.username}/`{msg.chat.id}`"
     else:
-        chat_username = f"ᴩʀɪᴠᴀᴛᴇ ɢʀᴏᴜᴩ/`{msg.chat.id}`"
+        chat_username = f"Private Grup/`{msg.chat.id}`"
 
     bugs = content(msg)
     user_id = msg.from_user.id
@@ -49,36 +49,36 @@ async def bugs(_, msg: Message):
 **ᴇᴠᴇɴᴛ sᴛᴀᴍᴩ : ** **{datetimes}**"""
 
     if msg.chat.type == "private":
-        await msg.reply_text("<b>» ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴩs.</b>")
+        await msg.reply_text("<b>Perintah ini hanya bisa dilakukan digrup.</b>")
         return
 
     if user_id == owner_id:
         if bugs:
             await msg.reply_text(
-                "<b>» ᴀʀᴇ ʏᴏᴜ ᴄᴏᴍᴇᴅʏ ᴍᴇ 🤣, ʏᴏᴜ'ʀᴇ ᴛʜᴇ ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ʙᴏᴛ.</b>",
+                "<b>apakah kamu komedikan aku, kamu adalah pemiliknya.</b>",
             )
             return
         else:
-            await msg.reply_text("ᴄʜᴜᴍᴛɪʏᴀ ᴏᴡɴᴇʀ!")
+            await msg.reply_text("Pemilik!")
     elif user_id != owner_id:
         if bugs:
             await msg.reply_text(
-                f"<b>ʙᴜɢ ʀᴇᴩᴏʀᴛ : {bugs}</b>\n\n"
-                "<b>» ʙᴜɢ sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇᴩᴏʀᴛᴇᴅ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ !</b>",
+                f"<b>Berhasil mereport bug: {bugs}</b>\n\n"
+                "<b>Successful bug reported see support group !</b>",
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("⌯ ᴄʟᴏsᴇ ⌯", callback_data="close_data")]]
+                    [[InlineKeyboardButton("Tutup", callback_data="close_data")]]
                 ),
             )
             await app.send_photo(
                 -1001627039023,
-                photo="https://telegra.ph/file/f66e5843568d4b7f2a652.jpg",
+                photo="https://mallucampaign.in/images/img_1710090491.jpg",
                 caption=f"{bug_report}",
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("⌯ ᴠɪᴇᴡ ʙᴜɢ ⌯", url=f"{msg.link}")],
+                        [InlineKeyboardButton("Lihat bug", url=f"{msg.link}")],
                         [
                             InlineKeyboardButton(
-                                "⌯ ᴄʟᴏsᴇ ⌯", callback_data="close_send_photo"
+                                "Tutup", callback_data="close_send_photo"
                             )
                         ],
                     ]
@@ -86,7 +86,7 @@ async def bugs(_, msg: Message):
             )
         else:
             await msg.reply_text(
-                f"<b>» ɴᴏ ʙᴜɢ ᴛᴏ ʀᴇᴩᴏʀᴛ !</b>",
+                f"<b>Tidak ada bug yang dilaporkan!</b>",
             )
 
 
@@ -96,7 +96,7 @@ async def bugs(_, msg: Message):
 async def close_send_photo(_,  query :CallbackQuery):
     is_admin = await app.get_chat_member(query.message.chat.id, query.from_user.id)
     if not is_admin.privileges.can_delete_messages:
-        await query.answer("ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ʀɪɢʜᴛs ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs.", show_alert=True)
+        await query.answer("Anda tidak mempunyai hak untuk menutup ini.", show_alert=True)
     else:
         await query.message.delete()
 
