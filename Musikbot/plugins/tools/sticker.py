@@ -32,15 +32,15 @@ def generate_sticker(client, message):
 
 @app.on_message(filters.command("packkang"))
 async def _packkang(app :app,message):  
-    txt = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ....**")
+    txt = await message.reply_text("**Proses....**")
     if not message.reply_to_message:
-        await txt.edit('ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ')
+        await txt.edit('Replay ke pesan!')
         return
     if not message.reply_to_message.sticker:
-        await txt.edit('ʀᴇᴘʟʏ ᴛᴏ sᴛɪᴄᴋᴇʀ')
+        await txt.edit('Replay ke stickers!')
         return
     if message.reply_to_message.sticker.is_animated or  message.reply_to_message.sticker.is_video:
-        return await txt.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ɴᴏɴ-ᴀɴɪᴍᴀᴛᴇᴅ sᴛɪᴄᴋᴇʀ")
+        return await txt.edit("Putar ulang ke stiker non-animasi ")
     if len(message.command) < 2:
         pack_name =  f'{message.from_user.first_name}_sticker_pack_by_@{BOT_USERNAME}'
     else :
@@ -79,7 +79,7 @@ async def _packkang(app :app,message):
                 stickers=sticks,
             )
         )
-        await txt.edit(f"**ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴋᴀɴɢᴇᴅ ʟɪɴᴋ**!\n**ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ **: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴘᴀᴄᴋ ʟɪɴᴋ",url=f"http://t.me/addstickers/{short_name}")]]))
+        await txt.edit(f"**Ini tautan KANG Anda**!\n**Total stickers**: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Pack Link",url=f"http://t.me/addstickers/{short_name}")]]))
     except Exception as e:
         await message.reply(str(e))
 
@@ -93,9 +93,9 @@ async def sticker_id(app: app, msg):
         await msg.reply_text("Reply to a sticker")        
     st_in = msg.reply_to_message.sticker
     await msg.reply_text(f"""
-⊹ <u>**sᴛɪᴄᴋᴇʀ ɪɴғᴏ**</u> ⊹
-**⊚ sᴛɪᴄᴋᴇʀ ɪᴅ **: `{st_in.file_id}`\n
-**⊚ sᴛɪᴄᴋᴇʀ ᴜɴɪǫᴜᴇ ɪᴅ **: `{st_in.file_unique_id}`
+⊹ <u>**Stickers Informasi**</u> ⊹
+**Stickers ID**: `{st_in.file_id}`\n
+**Stickers UNIQUE ID**: `{st_in.file_unique_id}`
 """)
 
 
