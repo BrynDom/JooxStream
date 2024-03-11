@@ -36,17 +36,17 @@ async def instatus(app, message):
         end_time = time.perf_counter()
         timelog = "{:.2f}".format(end_time - start_time)
         await sent_message.edit(f"""
-**➖➖➖➖➖➖➖
-➲ NAME : {message.chat.title} ✅
-➲ MEMBERS : [ {count} ]🫂
+**
+Name : {message.chat.title} ✅
+Members : [ {count} ]🫂
+
+Bots : {bot}💡
+Zombies : {deleted_acc}🧟
+Banned : {banned}🚫
+Premium User: {premium_acc}🎁
 ➖➖➖➖➖➖➖
-➲ BOTS : {bot}💡
-➲ ZOMBIES : {deleted_acc}🧟
-➲ BANNED : {banned}🚫
-➲ PREMIUM USERS : {premium_acc}🎁
-➖➖➖➖➖➖➖
-TIME TAKEN : {timelog} S**""")
+Time Taken : {timelog} S**""")
     else:
-        sent_message = await message.reply_text("ONLY ADMINS CAN USE THIS !")
+        sent_message = await message.reply_text("Hanya admin yang bisa menggunakan ini !")
         await sleep(5)
         await sent_message.delete()
