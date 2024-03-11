@@ -27,13 +27,13 @@ async def remove(client, message):
     if has_permissions:
       bot = await app.get_chat_member(message.chat.id, "self")
       if bot.status == ChatMemberStatus.MEMBER:
-        await message.reply("ɪ ɴᴇᴇᴅ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs.")  
+        await message.reply("Saya butuh gelar admin untuk menghapus hapus akun!")  
       else:  
         if len(chatQueue) > 30 :
-          await message.reply("ɪ'ᴍ ᴀʟʀᴇᴀᴅʏ ᴡᴏʀᴋɪɴɢ ᴏɴ ᴍʏ ᴍᴀxɪᴍᴜᴍ ɴᴜᴍʙᴇʀ ᴏғ 30 ᴄʜᴀᴛs ᴀᴛ ᴛʜᴇ ᴍᴏᴍᴇɴᴛ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ sʜᴏʀᴛʟʏ.")
+          await message.reply("saya sedang mengerjakan jumlah maksimal 30 obrolan saya saat ini. Silakan tunggu sebentar")
         else:  
           if message.chat.id in chatQueue:
-            await message.reply("ᴛʜᴇʀᴇ's ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴏɴɢɪɪɴɢ ᴘʀᴏᴄᴇss ɪɴ ᴛʜɪs ᴄʜᴀᴛ. ᴘʟᴇᴀsᴇ [ /stop ] ᴛᴏ sᴛᴀʀᴛ ᴀ ɴᴇᴡ ᴏɴᴇ.")
+            await message.reply("sudah ada proses yang sedang berlangsung dalam obrolan ini. tolong [ /stop ] untuk memulai yang baru.")
           else:  
             chatQueue.append(message.chat.id)  
             deletedList = []
@@ -90,7 +90,7 @@ async def admins(client, message):
       else:
         pass   
     lenAdminList= len(ownerList) + len(adminList)  
-    text2 = f"**ɢʀᴏᴜᴘ sᴛᴀғғ - {message.chat.title}**\n\n"
+    text2 = f"**STAFF GROUP - {message.chat.title}**\n\n"
     try:
       owner = ownerList[0]
       if owner.username == None:
