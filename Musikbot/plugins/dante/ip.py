@@ -7,7 +7,7 @@ from Musikbot import app
 @app.on_message(filters.command(["ip"]))
 def ip_info(_, message):
     if len(message.command) != 2:
-        message.reply_text("Please provide an IP address after the command. Example: /ip 8.8.8.8")
+        message.reply_text("Harap berikan alamat IP setelah perintah. Contoh: /ip 8.8.8.8")
         return
 
     ip_address = message.command[1]
@@ -16,7 +16,7 @@ def ip_info(_, message):
     if info:
         message.reply_text(info)
     else:
-        message.reply_text("Unable to fetch information for the provided IP address.")
+        message.reply_text("Tidak dapat mengambil informasi untuk alamat IP yang diberikan.")
 
 
 def get_ip_info(ip_address):
@@ -28,4 +28,4 @@ def get_ip_info(ip_address):
             info = f"IP: {data['ip']}\nCountry: {data['country']}\nCity: {data['city']}\nISP: {data['isp']}"
             return info
     except Exception as e:
-        print(f"Error fetching IP information: {e}")
+        print(f"Terjadi kesalahan saat mengambil informasi IP: {e}")
