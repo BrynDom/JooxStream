@@ -90,7 +90,7 @@ VC_TAG = [ " **Haii?** ",
 async def mentionall(client, message):
     chat_id = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply("๏ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.")
+        return await message.reply("Perintah ini hanya untuk admin .")
 
     is_admin = False
     try:
@@ -104,10 +104,10 @@ async def mentionall(client, message):
         ):
             is_admin = True
     if not is_admin:
-        return await message.reply("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs. ")
+        return await message.reply("Anda bukan admin, hanya admin yang dapat menandai anggota!")
 
     if message.reply_to_message and message.text:
-        return await message.reply("/hitag ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs / ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ ʙᴏᴛ ᴛᴀɢɢɪɴɢ...")
+        return await message.reply("/hitag Silahkan replay ke pesan atau ketik pesan agar dapat menggunakan perintah ini!")
     elif message.text:
         mode = "text_on_cmd"
         msg = message.text
