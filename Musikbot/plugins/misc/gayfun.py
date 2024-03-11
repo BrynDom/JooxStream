@@ -15,11 +15,11 @@ def calculate_gay_percentage():
 def generate_gay_response(gay_percentage):
     # Define random texts and emojis for different gay percentage ranges
     if gay_percentage < 30:
-        return "You're straight as an arrow. 🏳️‍🌈"
+        return "Kamu lurus seperti anak panah. 🏳️‍🌈"
     elif 30 <= gay_percentage < 70:
-        return "You might have a bit of a rainbow in you. 🌈"
+        return "Anda mungkin memiliki sedikit pelangi di dalam diri Anda. 🌈"
     else:
-        return "You're shining with rainbow colors! 🌟🏳️‍🌈"
+        return "Anda bersinar dengan warna pelangi! 🌟🏳️‍🌈"
 
 @app.on_message(filters.command("gay") & filters.regex(r'^/gay$'))
 def gay_calculator_command(client, message: Message):
@@ -38,7 +38,7 @@ def gay_calculator_command(client, message: Message):
 @app.on_message(filters.command("logo"))
 async def logo(app, msg: Message):
     if len(msg.command) == 1:
-       return await msg.reply_text("Usage:\n\n /logo daxx")
+       return await msg.reply_text("Usage:\n\n /logo Dante")
     logo_name = msg.text.split(" ", 1)[1]
     API = f"https://api.sdbots.tech/logohq?text={logo_name}"
     req = requests.get(API).url
