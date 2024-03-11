@@ -6,7 +6,7 @@ from datetime import datetime
 from Musikbot import app as app
 import requests
 
-@app.on_message(filters.command("write"))
+@app.on_message(filters.command("Tulis"))
 async def handwrite(_, message: Message):
     if message.reply_to_message:
         text = message.reply_to_message.text
@@ -16,9 +16,9 @@ async def handwrite(_, message: Message):
     write = requests.get(f"https://apis.xditya.me/write?text={text}").url
 
     caption = f"""
-sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ ᴡʀɪᴛᴛᴇɴ ʙʏ : [𝐘ᴜᴍɪᴋᴏᴏ](https://t.me/{BOT_USERNAME})
-🥀 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}
+Berhasil membuat tulisan :
+Tulisan By : [Stream Bot](https://t.me/{BOT_USERNAME})
+Request By : {message.from_user.mention}
 """
     await m.delete()
     await message.reply_photo(photo=write,caption=caption)
