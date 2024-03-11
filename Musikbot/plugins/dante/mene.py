@@ -27,5 +27,5 @@ def meme_command(client, message):
         )
 
     except Exception as e:
-        print(f"Error fetching meme: {e}")
-        message.reply_text("Sorry, I couldn't fetch a meme at the moment.")
+        print(f"Terjadi kesalahan saat mengambil meme: {e}")
+        message.reply_text("Maaf, saya tidak bisa mengambil meme saat ini.")
