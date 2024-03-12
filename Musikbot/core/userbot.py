@@ -60,7 +60,7 @@ class Userbot(Client):
                 await self.one.send_message(config.LOGGER_ID, "Assistant Started")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
+                    "Akun Asisten 1 gagal mengakses Grup log. Pastikan Anda telah menambahkan asisten Anda ke grup log Anda dan dipromosikan sebagai admin!"
                 )
                 exit()
             self.one.id = self.one.me.id
@@ -81,7 +81,7 @@ class Userbot(Client):
                 await self.two.send_message(config.LOGGER_ID, "Assistant Started")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
+                    "Akun Asisten 2 gagal mengakses Grup log. Pastikan Anda telah menambahkan asisten Anda ke grup log Anda dan dipromosikan sebagai admin!"
                 )
                 exit()
             self.two.id = self.two.me.id
