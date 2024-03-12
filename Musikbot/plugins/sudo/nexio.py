@@ -12,36 +12,35 @@ from Musikbot.utils.daxx_ban import admin_filter
 
 
 Yumikoo_text = [
-"hey please don't disturb me.",
-"who are you",    
-"aap kon ho",
-"aap mere owner to nhi lgte ",
-"hey tum mera name kyu le rhe ho meko sone do",
-"ha bolo kya kaam hai ",
-"dekho abhi mai busy hu ",
-"hey i am busy",
-"aapko smj nhi aata kya ",
-"leave me alone",
-"dude what happend",    
+"hei tolong jangan ganggu aku.",
+"siapa kamu",    
+"Hai",
+"Hanya owner yg bisa memarahiku",
+"Apa?",
+"Apakah kamu suka aku?",
+"Gimana hari hari nya?",
+"Saya butuh teman",
+"Jika kamu memarahi ku nanti aku sedih.",
+"Aku tidak suka sendiri",
+"Apakah kamu mau menemaniku",    
 ]
 
 strict_txt = [
-"i can't restrict against my besties",
-"are you serious i am not restrict to my friends",
-"fuck you bsdk k mai apne dosto ko kyu kru",
-"hey stupid admin ", 
-"ha ye phele krlo maar lo ek dusre ki gwaand",  
-"i can't hi is my closest friend",
-"i love him please don't restict this user try to usertand "
+"aku tidak bisa membatasi terhadap sahabatku",
+"Apa ini?",
+"Hanya admin", 
+"Apakah kamu temanku?",  
+"aku tidak bisa hai adalah teman terdekatku",
+"aku mencintainya tolong jangan batasi pengguna ini, cobalah untuk mengerti "
 ]
 
 
  
-ban = ["ban","boom"]
+ban = ["ban","blokir"]
 unban = ["unban",]
 mute = ["mute","silent","shut"]
 unmute = ["unmute","speak","free"]
-kick = ["kick", "out","nikaal","nikal"]
+kick = ["kick", "out","keluar","tendang"]
 promote = ["promote","adminship"]
 fullpromote = ["fullpromote","fulladmin"]
 demote = ["demote","lelo"]
@@ -71,13 +70,13 @@ async def restriction_app(app :app, message):
                     await message.reply(random.choice(strict_txt))          
                 else:
                     await app.ban_chat_member(chat_id, user_id)
-                    await message.reply("OK, Ban kar diya madrchod ko sala Chutiya tha !")
+                    await message.reply("OK, berhasil diban!")
                     
         for unbanned in data:
             print(f"present {unbanned}")
             if unbanned in unban:
                 await app.unban_chat_member(chat_id, user_id)
-                await message.reply(f"Ok, aap bolte hai to unban kar diya") 
+                await message.reply(f"Ok, berhasil di lepas dari larangan") 
                 
         for kicked in data:
             print(f"present {kicked}")
@@ -88,7 +87,7 @@ async def restriction_app(app :app, message):
                 else:
                     await app.ban_chat_member(chat_id, user_id)
                     await app.unban_chat_member(chat_id, user_id)
-                    await message.reply("get lost! bhga diya bhosdi wale ko") 
+                    await message.reply("Gagal! Cobalah ulangi") 
                     
         for muted in data:
             print(f"present {muted}") 
@@ -99,14 +98,14 @@ async def restriction_app(app :app, message):
                 else:
                     permissions = ChatPermissions(can_send_messages=False)
                     await message.chat.restrict_member(user_id, permissions)
-                    await message.reply(f"muted successfully! Disgusting people.") 
+                    await message.reply(f"Berhasil dibisukan!.") 
                     
         for unmuted in data:
             print(f"present {unmuted}")            
             if unmuted in unmute:
                 permissions = ChatPermissions(can_send_messages=True)
                 await message.chat.restrict_member(user_id, permissions)
-                await message.reply(f"Huh, OK, sir!")   
+                await message.reply(f"Huh, OK, Tuan!")   
 
 
         for promoted in data:
