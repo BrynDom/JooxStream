@@ -285,9 +285,9 @@ maint_3: "mode pemeliharaan dinonaktifkan {0}."
 maint_4: "mode pemeliharaan sudah diaktifkan."
 maint_5: "mode pemeliharaan sudah dinonaktifkan."
 
-log_1 : "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n/logger [ᴇɴᴀʙʟᴇ | ᴅɪsᴀʙʟᴇ]"
-log_2 : "ᴇɴᴀʙʟᴇᴅ ʟᴏɢɢɪɴɢ."
-log_3 : "ᴅɪsᴀʙʟᴇᴅ ʟᴏɢɢɪɴɢ."
+log_1: "<b>Example:</b>\n/logger [Enable | Disable]"
+log_2: "Pencatatan data diaktifkan."
+log_3: "Pencatatan data telah dinonaktifkan."
 
 broad_1 : "» sᴛᴀʀᴛᴇᴅ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ..."
 broad_2 : "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n\n/broadcast [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]"
