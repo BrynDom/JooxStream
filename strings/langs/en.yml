@@ -38,11 +38,11 @@ auth_6 : "» ғᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ
 auth_7 : "» ʟɪsᴛ ᴏғ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ɪɴ {0} :\n\n"
 auth_8 : "<b>↬ ᴀᴅᴅᴇᴅ ʙʏ :</b>"
 
-reload_1 : "» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʀᴇғʀᴇsʜ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ ᴏɴᴄᴇ ɪɴ 3 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ ᴛʀʏ ᴀғᴛᴇʀ {0}."
-reload_2 : "» ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ ʀᴇғʀᴇsʜᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
-reload_3 : "» ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇʟᴏᴀᴅ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ, ᴍᴀᴋᴇ sᴜʀᴇ ᴛʜᴀᴛ ᴛʜᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ."
-reload_4 : "» ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\nʀᴇʙᴏᴏᴛɪɴɢ {0} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ."
-reload_5 : "sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇʙᴏᴏᴛᴇᴅ {0} ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ.\n\nsᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴀɢᴀɪɴ..."
+reload_1: "Kamu hanya dapat memperbarui cache admin setiap 3 menit sekali.\n\nSilakan coba setelahnya {0}."
+reload_2: "Cache admin telah berhasil diperbarui."
+reload_3: "gagal memperbarui cache moderator, pastikan bot adalah admin dalam grup atau channels Anda."
+reload_4: "Harap tunggu...\n\nmulai ulang {0} untuk percakapan Anda."
+reload_5: "{0} telah berhasil memulai ulang percakapan Anda.\n\nMulai memutar lagi..."
 
 admin_1 : "» ᴅɪᴅ ʏᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ'ᴠᴇ ʀᴇsᴜᴍᴇᴅ ᴛʜᴇ sᴛʀᴇᴀᴍ ?"
 admin_2 : "➻ sᴛʀᴇᴀᴍ ᴘᴀᴜsᴇᴅ\n│ \n└ʙʏ : {0} "
