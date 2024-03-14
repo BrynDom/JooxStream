@@ -14,12 +14,12 @@
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "12320311",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "264db47292be59754aa857da32d780f4",
         "required": true
       },
       "BOT_TOKEN": {
@@ -29,17 +29,22 @@
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "",
+        "value": "mongodb+srv://evanescants:vooyage4636@cluster0.4leehdx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
         "required": true
       },
       "MUST_JOIN": {
         "description": "Jangan pakai https langsung @",
-        "value": "",
+        "value": "@MusicStreamMp3",
+        "required": true
+      },      
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "Flase",
+        "value": "False",
         "required": true
       },      
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "",
+        "value": "940232666",
         "required": true
       },
       "STRING_SESSION": {
@@ -59,7 +64,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "",
+        "value": "-1002009684047",
         "required": true
       }
     },
