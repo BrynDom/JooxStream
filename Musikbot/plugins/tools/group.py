@@ -5,16 +5,16 @@ from config import OWNER_ID
 # vc on
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
-       await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
+       await msg.reply("Obrolan suara dimulai")
 # vc off
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
-       await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
+       await msg.reply("**Obrolan suara berakhir**")
 
 # invite members on vc
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app :app, message:Message):
-           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+           text = f"{message.from_user.mention} Mengundang"
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
@@ -44,7 +44,7 @@ def calculate_math(client, message):
 @app.on_message(filters.command("leavegroup")& filters.user(OWNER_ID))
 async def bot_leave(_, message):
     chat_id = message.chat.id
-    text = f"sᴜᴄᴄᴇssғᴜʟʟʏ   ʟᴇғᴛ  !!."
+    text = f"Berhasil keluar grup tuan!!."
     await message.reply_text(text)
     await app.leave_chat(chat_id=chat_id, delete=True)
 
