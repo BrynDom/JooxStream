@@ -6,12 +6,12 @@ from Musikbot import app
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 ###
-@app.on_message(filters.command("daxxhub"))
+@app.on_message(filters.command("dante"))
 async def daxxhub(_, message):
-    text = message.text[len("/daxxhub") :]
-    papadaxx(f"{text}").save(f"daxxhub_{message.from_user.id}.png")
-    await message.reply_photo(f"daxxhub_{message.from_user.id}.png")
-    os.remove(f"daxxhub_{message.from_user.id}.png")
+    text = message.text[len("/dante") :]
+    papadaxx(f"{text}").save(f"dante_{message.from_user.id}.png")
+    await message.reply_photo(f"dante_{message.from_user.id}.png")
+    os.remove(f"dante_{message.from_user.id}.png")
 ####
 
 @app.on_message(filters.command(["github", "git"]))
