@@ -86,7 +86,7 @@ admin_39 : "satu suara positif telah dihapus."
 admin_40 : "Voted positive."
 
 start_1 : "Terima kasih telah menerima saya di {0}.\n{1} masih hidup.\n\nUntuk bantuan atau bantuan apa pun, periksa grup dan saluran dukungan kami."
-start_2 : "Halo, saya adalah {0}.\n\nbot musik dan manage dengan beberapa fitur berguna, untuk memudahkan anda mengelola grup dan channels telegram.\n\njika ingin melihat bantuan silahkan pilih menu dibawah!."
+start_2 : "Halo {0},saya adalah {1}.\n\nbot musik dan manage dengan beberapa fitur berguna, untuk memudahkan anda mengelola grup dan channels telegram.\n\njika ingin melihat bantuan silahkan pilih menu dibawah!."
 start_3 : "Selamat datang di {0}\n\nSaya memerlukan **izin admin** untuk bekerja (sampai diminta).\n\nNama Pengguna Asisten:- @{1}\nID Asisten:- {2} "
 start_4 : "Pemilik {0}[{1}] baru saja bergabung dengan obrolan Anda."
 start_5 : "Anggota Pengguna Sudo {0}[{1}] baru saja bergabung dengan obrolan Anda."
@@ -97,7 +97,7 @@ start_7 : "**Obrolan Daftar Hitam**\n\nObrolan Anda telah dimasukkan dalam dafta
 help_1 : "Silahkan pilih menu yang ada dibawah ini menu mana yang ingin dilihat : <code>/</code>"
 help_2 : "Klik disini jika ingin melihat menu bantuan lebih lanjut"
 
-ping_1 : "✅ daftar Stats {0}"
+ping_1 : "✅ Bot di mulai ulang\n ├ ⚠️ Sistem stats :\n └ ⚠️ Ping....\ncode>{0}MS</code>\n\n<b><u>{1} Stats :</u></b>\n\nUptime : {2}\nRam : {3}\nCpu : {4}\nDisk : {5}\nPyTgcalls : <code>{6}Ms</code>"
 ping_2 : "✅ Bot di mulai ulang\n ├ ⚠️ Sistem stats :\n └ ⚠️ Ping....\ncode>{0}MS</code>\n\n<b><u>{1} Stats :</u></b>\n\nUptime : {2}\nRam : {3}\nCpu : {4}\nDisk : {5}\nPyTgcalls : <code>{6}Ms</code>"
 
 lang_1 : "Tolong settings bahasa mana yang anda ingin ubah :"
