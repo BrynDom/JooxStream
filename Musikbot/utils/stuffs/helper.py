@@ -3,11 +3,11 @@
 class Helper(object):
     HELP_M = '''Dibawah ini adalah menu bantuan manage : /'''
     
-    HELP_ChatGPT = '''CʜᴀᴛGPT
+    HELP_ChatGPT = '''ChatGPT
 
-CʜᴀᴛGPT ᴄᴏᴍᴍᴀɴᴅꜱ:
+Commands:
 
-/ask ➠ ǫᴜᴇʀɪᴇs ᴛʜᴇ ᴀɪ ᴍᴏᴅᴇʟ ᴛᴏ ɢᴇᴛ ᴀ ʀᴇsᴘᴏɴsᴇ ᴛᴏ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ.
+/ask Ajukan pertanyaan contoh /ask dimanakah letak antartika
 '''
 
     HELP_Sticker = '''sᴛɪᴄᴋᴇʀs
