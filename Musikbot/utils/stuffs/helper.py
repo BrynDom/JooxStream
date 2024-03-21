@@ -109,8 +109,6 @@ Admins only:
  ❍ /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
  ❍ /tmute <userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
  ❍ /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.
-__
-𝐒ᴘᴇᴄɪᴀʟ 𝐂ᴏᴍᴍᴀɴᴅs 𝐒ᴜᴘᴘᴏʀᴛ 𝐀ʟʟ 𝐄xᴀᴍᴘʟᴇ  - 𝚈𝚞𝚖𝚒 𝚋𝚊𝚗 𝚈𝚞𝚖𝚒 𝚖𝚞𝚝𝚎 𝚈𝚞𝚖𝚒 𝚙𝚛𝚘𝚖𝚘𝚝𝚎 ..... 𝚎𝚝𝚌
 '''
     HELP_Search = '''Sᴇᴀʀᴄʜ
 
@@ -231,13 +229,15 @@ Example:
 '''
 
     HELP_Bot = '''Bot
-
+    
+Only Owner
 /cekbot lihat bot mana saja yang online/masih hidup.
 '''
 
     HELP_Filters = '''Filters
-/filter Buat filter digrup 
-Contoh: /filter hallo replay pesan.
+    
+/filters Buat filter digrup 
+Contoh: /filters hallo replay pesan.
 /stop Menghapus filter
 Contoh: /stop hallo
 '''   
