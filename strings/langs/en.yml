@@ -105,7 +105,7 @@ lang_2 : "Bahasa berhasil diubah.."
 lang_3 : "Gagal menganti bahasa..."
 lang_4 : "Anda sudah menggunakan bahasa yang sama"
 
-setting_1 : "<u><b>Settings panel{0}</b></u>\n<b>Chat ID:</b><code>{1}</code>\n<b>Chat address:</b>{2}\n\nKlik tombol di bawah untuk mengubah pengaturans."
+setting_1 : "<u><b>Settings panel{0}</b></u>\n<b>Chat ID:</b><code>{1}</code>\n<b>Chat address:</b>{2}\n\nKlik tombol di bawah untuk mengubah pengaturan."
 setting_2 : "live: Melakukan pencarian secara langsung.\n\nincluded: Mengembalikan tombol sebaris untuk memilih antara video dan audio."
 setting_3 : "Everyone: Siapa pun dapat menggunakan perintah admin [skip, pause, next, dll] di grup ini.\n\nOnly admins: Hanya admin dan pengguna yang berwenang yang dapat menggunakan perintah admin."
 setting_4 : "tidak ada pengguna resmi yang ditemukan."
