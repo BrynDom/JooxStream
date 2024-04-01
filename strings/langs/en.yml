@@ -97,7 +97,7 @@ start_7 : "**Obrolan Daftar Hitam**\n\nObrolan Anda telah dimasukkan dalam dafta
 help_1 : "Silahkan pilih menu yang ada dibawah ini menu mana yang ingin dilihat : <code>/</code>"
 help_2 : "Klik disini jika ingin melihat menu bantuan lebih lanjut"
 
-ping_1 : "{0} Status Active"
+ping_1 : "{0} ✅ Bot di mulai ulang /n├ ⚠️ Saya tidak dapat menghapus /n└ ⚠️ Saya tidak bisa blokir /n✅ Daftar admin di perbarui"
 ping_2 : "⚡ Active : <code>{0}Ms</code>\n\n<b><u>{1} Info System :</u></b>\n\n Uptime : {2}\nRam : {3}\nCpu : {4}\nDisk : {5}\nPyTg : <code>{6}Ms</code>"
 
 lang_1 : "Tolong settings bahasa mana yang anda ingin ubah :"
