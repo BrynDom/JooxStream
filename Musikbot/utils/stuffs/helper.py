@@ -219,9 +219,9 @@ Imposter Commands:
 Untuk menandai anggota yang mengubah nama digroup!
 
 ⦿ /imposter
-➠ on/menghidupkan 
+➠ enable = menghidupkan 
 ⦿ /imposter
-➠ off/mematikan
+➠ disable = mematikan
 '''
     HELP_TD = '''Truth-Dare
 
@@ -278,7 +278,10 @@ Membuat stickers besar dan kecil.
 '''
     HELP_SangMata = '''Sang mata
 
-/sg Cari tau riwayat nama pengguna sebelumnya.
+SangMata Commands:
+
+⦿ /sg
+➠ Cari tau riwayat nama pengguna sebelumnya.
 '''
 
     HELP_Bot = '''Bot
