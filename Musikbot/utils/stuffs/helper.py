@@ -10,19 +10,20 @@ Commands:
 /ask Ajukan pertanyaan contoh /ask dimanakah letak antartika
 '''
 
-    HELP_Sticker = '''sᴛɪᴄᴋᴇʀs
+    HELP_Sticker = '''Stickers
 
-sᴛɪᴄᴋᴇʀs ᴄᴏᴍᴍᴀɴᴅꜱ:
+Stickers Commands:
 
-/packkang ➠ ᴄʀᴇᴀᴛᴇs ᴀ ᴘᴀᴄᴋ ᴏғ sᴛɪᴄᴋᴇʀs ғʀᴏᴍ ᴀ ᴏᴛʜᴇʀ ᴘᴀᴄᴋ.
-/stickerid ➠ ɢᴇᴛs ᴛʜᴇ sᴛɪᴄᴋᴇʀ ɪᴅ ᴏғ ᴀ sᴛɪᴄᴋᴇʀ.
+/packkang Buat paket stiker dari paket lain
+/stickerid Mendapatkan id stiker dari sebuah stiker
 '''
 
-    HELP_TagAll = '''Tᴀɢ
+    HELP_TagAll = '''Tag
 
-  Tᴀɢ ᴄᴏᴍᴍᴀɴᴅꜱ:
-
-✿ ᴄʜᴏᴏsᴇ ᴛᴀɢ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ ✿
+Tag Commands:
+Panggil semua anggota di group.
+๏ Mention Panggil anggota.
+Stop mention /tagstop
 
 ๏ /gmtag ➛ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 
 ᴛᴀɢ sᴛᴏᴘ ⇴ /gmstop
