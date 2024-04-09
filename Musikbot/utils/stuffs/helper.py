@@ -22,34 +22,40 @@ Stickers Commands:
 
 Tag Commands:
 Panggil semua anggota di group.
-๏ Mention Panggil anggota.
-Stop mention /tagstop
+๏ Mention Panggil semua anggota.
+➠ Stop mention /alloff
 
-๏ /gmtag ➛ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 
-ᴛᴀɢ sᴛᴏᴘ ⇴ /gmstop
+๏ /gmtag Pesan selamat pagi
+➠ Tag stop /gmstop
 
-๏ /gntag ➛ ɢᴏᴏᴅ ɴɪɢʜᴛ ᴛᴀɢ sᴛᴏᴘ ⇴ /gnstop
+๏ /gntag Pesan selamat malam  
+➠ Tag Stop /gnstop
 
-๏ /tagall ➛ ʀᴀɴᴅᴏᴍ ᴍᴇssᴀɢᴇ ᴛᴀɢ sᴛᴏᴘ ⇴ /tagoff /tagstop
+๏ /tagall Panggil anggota random
+➠ Tag stop /tagoff /tagstop
 
-๏ /hitag ➛ ʀᴀɴᴅᴏᴍ ʜɪɴᴅɪ ᴍᴇssᴀɢᴇ ᴛᴀɢ sᴛᴏᴘ ⇴/histop
+๏ /hitag Pesan untuk sapa anggota 
+➠ Tag Stop /histop
 
-๏ /shayari ➛ ʀᴀɴᴅᴏᴍ sʜᴀʏᴀʀɪ ᴛᴀɢ sᴛᴏᴘ ⇴ /shstop
+๏ /shayari Pesan mesra
+➠ Tag stop /shstop
 
-๏ /utag ➛ ᴀɴʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ ᴛᴀɢ sᴛᴏᴘ ⇴ /cancel 
+๏ /utag Pesan random
+➠ Tag stop /cancel 
 
-๏ /vctag ➛ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴᴠɪᴛᴇ ᴛᴀɢ sᴛᴏᴘ ⇴ /vcstop
+๏ /vctag Invite anggota ke obrolan suara
+➠ /vcstop
 '''
 
-    HELP_Info = '''Iɴꜰᴏ
+    HELP_Info = '''Info
 
-Iɴꜰᴏ ᴄᴏᴍᴍᴀɴᴅꜱ:
+Info Commands:
 
-/id : ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢʀᴏᴜᴘ ɪᴅ. ɪғ ᴜsᴇᴅ ʙʏ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ɢᴇᴛs ᴛʜᴀᴛ ᴜsᴇʀ's ɪᴅ.
-/info : ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ.
-/github <ᴜsᴇʀɴᴀᴍᴇ> : ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ.
+๏ /id : Replay ke pasan cek id users digroup maupun dibot.
+๏ /info : Lihat informasi users.
+๏ /github <Username> : lihat informasi github dengan username.
 '''
-    HELP_Group = '''Gʀᴏᴜᴘ
+    HELP_Group = '''Group
 
 Gʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ:
 
