@@ -7,15 +7,19 @@ class Helper(object):
 
 Commands:
 
-/ask Ajukan pertanyaan contoh /ask dimanakah letak antartika
+⦿ /ask
+➠ Ajukan pertanyaan contoh /ask dimanakah letak antartika
 '''
 
     HELP_Sticker = '''Stickers
 
 Stickers Commands:
 
-/packkang Buat paket stiker dari paket lain
-/stickerid Mendapatkan id stiker dari sebuah stiker
+⦿ /packkang
+➠ Buat paket stiker dari paket lain.
+
+⦿ /stickerid
+➠ Mendapatkan id stiker dari sebuah stiker
 '''
 
     HELP_TagAll = '''Tag
@@ -51,115 +55,153 @@ Panggil semua anggota di group.
 
 Info Commands:
 
-๏ /id : Replay ke pasan cek id users digroup maupun dibot.
-๏ /info : Lihat informasi users.
-๏ /github <Username> : lihat informasi github dengan username.
+๏ /id
+➠ Replay ke pasan cek id users digroup maupun dibot.
+๏ /info
+➠ Lihat informasi users.
+๏ /github <Username>
+➠ lihat informasi github dengan username.
 '''
     HELP_Group = '''Group
 
-Gʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ:
-
-ᴛʜᴇsᴇ ᴀʀᴇ ᴛʜᴇ ᴀᴠᴀɪʟᴀʙʟᴇ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ᴄᴏᴍᴍᴀɴᴅs:
-
-⦿ /pin ➠ ᴘɪɴs ᴀ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /pinned ➠ ᴅɪsᴘʟᴀʏs ᴛʜᴇ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /unpin ➠ ᴜɴᴘɪɴs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.
-⦿ /staff ➠ ᴅɪsᴘʟᴀʏs ᴛʜᴇ ʟɪsᴛ ᴏғ sᴛᴀғғ ᴍᴇᴍʙᴇʀs.
-⦿ /bots ➠ ᴅɪsᴘʟᴀʏs ᴛʜᴇ ʟɪsᴛ ᴏғ ʙᴏᴛs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /settitle ➠ sᴇᴛs ᴛʜᴇ ᴛɪᴛʟᴇ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /setdiscription ➠ sᴇᴛs ᴛʜᴇ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /setphoto ➠ sᴇᴛs ᴛʜᴇ ɢʀᴏᴜᴘ ᴘʜᴏᴛᴏ.
-⦿ /removephoto ➠ ʀᴇᴍᴏᴠᴇs ᴛʜᴇ ɢʀᴏᴜᴘ ᴘʜᴏᴛᴏ.
-⦿ /zombies ➠ ʀᴇᴍᴏᴠᴇs ᴀᴄᴄ ᴅᴇʟᴇᴛᴇᴅ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /imposter ᴏɴ/ᴏғғ ➠ ᴛᴜʀɴs ᴏɴ ᴏʀ ᴏғғ ᴛʜᴇ ᴡᴀᴛᴄʜᴇʀ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴡʜɪᴄʜ ɴᴏᴛɪғɪᴇs ᴀʙᴏᴜᴛ ᴜsᴇʀs ᴡʜᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɪʀ ɴᴀᴍᴇ ᴏʀ ᴜsᴇʀɴᴀᴍᴇ.
+Group Commands:
+⦿ /pin 
+➠ Menyematkan pesan di grup.
+⦿ /pinned
+➠ Menampilkan pesan yang disematkan dalam grup.
+⦿ /unpin
+➠ Melepas pin pesan yang saat ini dipasangi pin.
+⦿ /staff
+➠ Menampilkan daftar anggota staf.
+⦿ /bots
+➠ Menampilkan daftar bot di grup.
+⦿ /settitle
+➠ Menentukan judul grup.
+⦿ /setdiscription
+➠ Menetapkan deskripsi grup.
+⦿ /setphoto
+➠ Mengatur Photo Group.
+⦿ /removephoto
+➠ Hapus Photo group.
+⦿ /zombies 
+➠ Hapus akun yang sudah terhapus dari group.
+⦿ /imposter ON/OFF 
+➠ Mengaktifkan atau menonaktifkan pengamat grup Anda, yang memberi tahu tentang pengguna yang mengubah nama atau nama pengguna mereka.
 '''
 
-    HELP_Extra = '''Exᴛʀᴀ
+    HELP_Extra = '''Extra
 
-Exᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ:
-
-⦿ /math ➠ sᴏʟᴠᴇs ᴍᴀᴛʜᴇᴍᴀᴛɪᴄᴀʟ ᴘʀᴏʙʟᴇᴍs ᴀɴᴅ ᴇǫᴜᴀᴛɪᴏɴs.
-⦿ /blackpink ➠ ɢᴇɴᴇʀᴀᴛᴇs ᴀ ʙʟᴀᴄᴋᴘɪɴᴋ-sᴛʏʟᴇ ʟᴏɢᴏ.
-⦿ /carbon ➠ ɢᴇɴᴇʀᴀᴛᴇs ᴀ ᴄᴀʀʙᴏɴ ᴄᴏᴅᴇ ɪᴍᴀɢᴇ ғʀᴏᴍ ᴀ ᴄᴏᴅᴇ sɴɪᴘᴘᴇᴛ.
-⦿ /speedtest ➠ ᴍᴇᴀsᴜʀᴇs ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ sᴘᴇᴇᴅ.
-⦿ /reverse ➠ ʀᴇᴠᴇʀsᴇs ᴀ ɢɪᴠᴇɴ ᴛᴇxᴛ.
-⦿ /webss ➠ ᴛᴀᴋᴇs ᴀ sᴄʀᴇᴇɴsʜᴏᴛ ᴏғ ᴀ ᴡᴇʙsɪᴛᴇ.
-⦿ /paste ➠ ᴜᴘʟᴏᴀᴅs ᴀ ᴛᴇxᴛ sɴɪᴘᴘᴇᴛ ᴛᴏ ᴛʜᴇ ᴄʟᴏᴜᴅ ᴀɴᴅ ɢɪᴠᴇs ᴀ ʟɪɴᴋ.
-⦿ /tgm ➠ ᴜᴘʟᴏᴀᴅs ᴀ ᴘʜᴏᴛᴏ (ᴜɴᴅᴇʀ 𝟻ᴍʙ) ᴛᴏ ᴛʜᴇ ᴄʟᴏᴜᴅ ᴀɴᴅ ɢɪᴠᴇs ᴀ ʟɪɴᴋ.
-⦿ /tr ➠ ᴛʀᴀɴsʟᴀᴛᴇs ᴛᴇxᴛ.
-⦿ /google ➠ sᴇᴀʀᴄʜᴇs ғᴏʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴏɴ ɢᴏᴏɢʟᴇ.
-⦿ /stack ➠ sᴇᴀʀᴄʜᴇs ғᴏʀ ᴘʀᴏɢʀᴀᴍᴍɪɴɢ-ʀᴇʟᴀᴛᴇᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴏɴ sᴛᴀᴄᴋ ᴏᴠᴇʀғʟᴏᴡ.
+Extra Commands:
+⦿ /math 
+➠ Memecahkan masalah matematika dan persamaan.
+⦿ /blackpink 
+➠ Menghasilkan logo gaya blackpink.
+⦿ /carbon
+➠ Hasilkan kode gambar kode karbon dari cuplikan kode.
+⦿ /speedtest
+➠ Lihat seberapa cepat server bot
+⦿ /reverse
+➠ Membalikkan teks tertentu.
+⦿ /webss
+➠ Salin link web dan screenshot website.
+⦿ /paste
+➠ Tempelkan teks berupa link.
+⦿ /tgm 
+➠ Upload photo agar saya bisa membuat link.
+⦿ /tr
+➠ Translate bahasa replay teks (id) Indonesia 
+⦿ /google
+➠ Cari informasi lewat google.
+⦿ /stack 
+➠ Untuk programming informasi.
 '''
 
-    HELP_Image = '''Iᴍᴀɢᴇ
+    HELP_Image = '''Image
 
-Iᴍᴀɢᴇ ᴄᴏᴍᴍᴀɴᴅꜱ:
+Image Commands:
 
-⦿ /draw ➠ ɢᴇɴᴇʀᴀᴛᴇs ᴀ ᴅʀᴀᴡɪɴɢ ʙᴀsᴇᴅ ᴏɴ ᴀ ɢɪᴠᴇɴ ᴘᴏʀᴏᴍᴘᴛ.
-⦿ /image ➠ sᴇᴀʀᴄʜᴇs ғᴏʀ ᴀɴ ɪᴍᴀɢᴇ ʙᴀsᴇᴅ ᴏɴ ᴀ ɢɪᴠᴇɴ ᴋᴇʏᴡᴏʀᴅ.
-⦿ /upscale ➠ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ɪᴛ ᴀɴᴅ ɪᴍᴘʀᴏᴠᴇ ɪᴛs ǫᴜᴀʟɪᴛʏ.
+⦿ /draw
+➠ Menghasilkan gambar berdasarkan perintah yang diberikan.
+
+⦿ /image
+➠ Mencari gambar berdasarkan kata kunci tertentu.
+
+⦿ /upscale
+➠ Replay ke gambar untuk meningkatkan dan memperbaiki kualitasnya.
 '''
-    HELP_Action = '''Aᴄᴛɪᴏɴ
+    HELP_Action = '''Tindakan
 
-Aᴄᴛɪᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ:
+Action Commands:
 
-» ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ Bᴀɴs & Mᴜᴛᴇ :
-
- ❍ /kickme: kicks the user who issued the command
+Command khusus untuk ban/mute.
+⦿ /kickme
+➠ kicks the user who issued the command
 
 Admins only:
- ❍ /ban <userhandle>: bans a user. (via handle, or reply)
- ❍ /sban <userhandle>: Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
- ❍ /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- ❍ /unban <userhandle>: unbans a user. (via handle, or reply)
- ❍ /kick <userhandle>: kicks a user out of the group, (via handle, or reply)
- ❍ /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
- ❍ /tmute <userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- ❍ /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.
+⦿ /ban <userhandle>
+➠ bans a user. (via handle, or reply)
+⦿ /sban <userhandle>
+➠ Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
+⦿ /tban <userhandle>
+➠ x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
+⦿ /unban <userhandle>
+➠ unbans a user. (via handle, or reply)
+⦿ /kick <userhandle>
+➠ kicks a user out of the groueply)
+⦿ /mute <userhandle>
+➠ silences a user. Can also be used as a reply, muting the replied to user.
+⦿ /tmute <userhandle>
+➠ x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
+⦿ /unmute <userhandle>
+➠ unmutes a user. Can also be used as a reply, muting the replied to user.
 '''
-    HELP_Search = '''Sᴇᴀʀᴄʜ
+    HELP_Search = '''Pencarian
 
-Sᴇᴀʀᴄʜ ᴄᴏᴍᴍᴀɴᴅꜱ:
+Search Commands;
 
-• /google <query> : Search the google for the given query.
-• /anime <query>  : Search myanimelist for the given query.
-• /stack <query>  : Search stackoverflow for the given query.
-• /image (/imgs) <query> : Get the images regarding to your query
+⦿ /google <query>
+➠ Cari di Google untuk permintaan yang diberikan.
+
+⦿ /anime <query>
+➠ Telusuri animelist untuk kueri yang diberikan.
+
+⦿ /stack <query>
+➠ Telusuri stackoverflow untuk kueri yang diberikan.
+
+⦿ /image (/imgs) <query>
+➠ Dapatkan gambar mengenai permintaan Anda.
 
 Example:
 /google pyrogram: return top 5 reuslts.
 '''
 
-    HELP_Font = '''ғᴏɴᴛ
+    HELP_Font = '''Font
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ ғᴏɴᴛ ᴍᴏᴅᴜʟᴇ:
+Font Commands:
 
-ғᴏɴᴛ ᴍᴏᴅᴜʟᴇ:
+⦿ /font [Text]
+➠ Contoh /font Hallo.
 
-ʙʏ ᴜsɪɴɢ ᴛʜɪs ᴍᴏᴅᴜʟᴇ ʏᴏᴜ ᴄᴀɴ ᴄʜᴀɴɢᴇ ғᴏɴᴛs ᴏғ ᴀɴʏ ᴛᴇxᴛ!
-
-◌ /font [ᴛᴇxᴛ]
+Note: pilih karakter font yang anda inginkan.
 '''
-    HELP_Game = '''ɢᴀᴍᴇs
+    HELP_Game = '''Games
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ ɢᴀᴍᴇs ᴍᴏᴅᴜʟᴇ:
-ɢᴀᴍᴇs ᴍᴏᴅᴜʟᴇ:
+Games Commands:
 
-ʜᴇʀᴇ ᴀʀᴇ sᴏᴍᴇ ᴍɪɴɪ ɢᴀᴍᴇs ғᴏʀ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ!
-
-◌ /toss [ᴛᴏss ᴀ ᴄᴏɪɴ]
-
-◌ /roll [ʀᴏʟʟ ᴀ ᴅɪᴄᴇ]
-
-◌ /dart [ᴛʜʀᴏᴡ ᴀ ᴅᴀʀᴛ]
-
-◌ /slot [Jᴀᴄᴋᴘᴏᴛ ᴍᴀᴄʜɪɴᴇ]
-
-◌ /bowling [ʙᴏᴡʟɪɴɢ ɢᴀᴍᴇ]
-
-◌ /basket [ʙᴀsᴋᴇᴛʙᴀʟʟ ɢᴀᴍᴇ]
-
-◌ /football [ғᴏᴏᴛʙᴀʟʟ ɢᴀᴍᴇ]
+⦿ /toss
+➠ [Tos Action]
+⦿ /roll
+➠ [Game roll]
+⦿ /dart
+➠ [Game Dart]
+⦿ /slot
+➠ [Game slot]
+⦿ /bowling
+➠ [Game bowling]
+⦿ /basket
+➠ [Game basket]
+⦿ /football
+➠ [Game bola]
 '''
     HELP_TG = '''Ⓣ-ɢʀᴀᴘʜ
 
