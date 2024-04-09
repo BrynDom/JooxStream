@@ -203,73 +203,78 @@ Games Commands:
 ⦿ /football
 ➠ [Game bola]
 '''
-    HELP_TG = '''Ⓣ-ɢʀᴀᴘʜ
+    HELP_TG = '''Tele
 
-Ⓣ-ɢʀᴀᴘʜ ᴄᴏᴍᴍᴀɴᴅꜱ:
+T-Graph Commands:
 
-ᴄʀᴇᴀᴛᴇ ᴀ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴀɴʏ ᴍᴇᴅɪᴀ!
+⦿ /tgm
+➠ [Replay ke media]
 
-◌ /tgm [ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇᴅɪᴀ]
-◌ /tgt [ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇᴅɪᴀ]
+⦿ /tgt
+➠ [Putar ulang ke media apa pun]
 '''
-    HELP_Imposter = '''ɪᴍᴘᴏsᴛᴇʀ
+    HELP_Imposter = '''Imposter
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ ɪᴍᴘᴏsᴛᴇʀ ᴍᴏᴅᴜʟᴇ:
+Imposter Commands:
+Untuk menandai anggota yang mengubah nama digroup!
 
-ɪᴍᴘᴏsᴛᴇʀ ᴍᴏᴅᴜʟᴇ:
-
-◌ /imposter on
-◌ /imposter off
+⦿ /imposter
+➠ on/menghidupkan 
+⦿ /imposter
+➠ off/mematikan
 '''
-    HELP_TD = '''Tʀᴜᴛʜ-ᗪᴀʀᴇ
+    HELP_TD = '''Truth-Dare
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ Tʀᴜᴛʜ-ᗪᴀʀᴇ ᴍᴏᴅᴜʟᴇ:
+Command:
+Kejujuran & Tantangan.
 
-ᴛʀᴜᴛʜ ᴀɴᴅ ᴅᴀʀᴇ
-◌ /truth : sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ sᴛʀɪɴɢ.
-◌ /dare : sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ sᴛʀɪɴɢ.
+⦿ /truth
+➠ Kirim teks beberapa pertanyaan untuk memulai games.
+⦿ /dare 
+➠ Kirim teks beberapa tantangan untuk memulai games.
 '''
-    HELP_HT = '''ʜᴀsᴛᴀɢ
+    HELP_HT = '''HasTag
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ ʜᴀsᴛᴀɢ ᴍᴏᴅᴜʟᴇ:
+HasTag Commands:
 
-ʜᴀsᴛᴀɢ
-◌ /hastag : [ᴛᴇxᴛ]
+⦿ /hastag
+➠ [Text]
 '''
-    HELP_TTS = '''ᴛᴛs
+    HELP_TTS = '''Tts
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ ᴛᴛs ᴍᴏᴅᴜʟᴇ:
+Tts Commands:
 
-❀ ᴛᴛs
-◌ /tts : [ᴛᴇxᴛ]
+Untuk membuat teks menjadi voice.
+⦿ /tts
+➠ [Text] Contoh /tts Saya ganteng.
 
-◌ ᴜsᴀɢᴇ ➛ ᴛᴇxᴛ ᴛᴏ ᴀᴜᴅɪᴏ
 '''
-    HELP_Fun = '''ғᴜɴ
+    HELP_Fun = '''Fun
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ ғᴜɴ ᴍᴏᴅᴜʟᴇ:
-ᴡɪsʜ ᴍᴏᴅᴜʟᴇ:
+Fun Commands:
 
-◌ /wish : ᴀᴅᴅ ʏᴏᴜʀ ᴡɪsʜ ᴀɴᴅ sᴇᴇ ɪᴛs ᴘᴏssɪʙɪʟɪᴛʏ!
-
-ᴍᴏʀᴇ sᴛᴜғғ:
-◌ /sigma [ᴄʜᴇᴄᴋ ʏᴏᴜʀ sɪɢᴍᴀɴᴇss]
-◌ /cute [ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴄᴜᴛᴇɴᴇss]
-◌ /horny [ᴄʜᴇᴄᴋ ʏᴏᴜʀ ʜᴏʀɴʏɴᴇss]
-◌ /lesbo [ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴜᴄʜ ʟᴇᴢʙɪᴀɴ ʏᴏᴜ ᴀʀᴇ]
-◌ /depressed [ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴜᴄʜ ᴅᴇᴘʀᴇssᴇᴅ ʏᴏᴜ ᴀʀᴇ]
-◌ /gay [ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴜᴄʜ ɢᴀʏ ʏᴏᴜ ᴀʀᴇ]
-◌ /rand [ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴜᴄʜ ʀᴀɴᴅ ʏᴏᴜ ᴀʀᴇ]
-◌ /bkl [ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴜᴄʜ ʙᴋʟ ʏᴏᴜ ᴀʀᴇ]
-◌ /boobs [ᴄʜᴇᴄᴋ ʏᴏᴜʀ ʙᴏᴏʙɪᴇs sɪᴢᴇ]
-◌ /dick [ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴅɪᴄᴋ sɪᴢᴇ]
+⦿ /wish
+➠ Tambahkan keinginan kamu.
+⦿ /cute
+➠ [Cek berapa nilai kecantikan kamu]
+⦿ /horny
+➠ [Cek apakah kamu horny apa tidak]
+⦿ /lesbi
+➠ [Cek apakah kamu lesbi]
+⦿ /depressed
+➠ [Cek berapa persen kamu depresi]
+⦿ /gay
+➠ [Cek apakah kamu gay atau tidak]
 '''
-    HELP_Q = '''ǫᴜᴏᴛʟʏ
+    HELP_Q = '''Quotly
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ ǫᴜᴏᴛʟʏ ᴍᴏᴅᴜʟᴇ:
+Membuat stickers besar dan kecil.
 
-◌ /q : ᴄʀᴇᴀᴛᴇ ᴀ ǫᴜᴏᴛᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇssᴀɢᴇ
-◌ /q r : ᴄʀᴇᴀᴛᴇ ᴀ ǫᴜᴏᴛᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ʀᴇᴘʟʏ
+⦿ /q 
+➠ Replay ke pesan agar bisa membuat stickers.
+
+⦿ /q r
+➠ Buat Stickers kecil
 '''
     HELP_SangMata = '''Sang mata
 
@@ -277,16 +282,23 @@ Games Commands:
 '''
 
     HELP_Bot = '''Bot
-    
-Only Owner
-/cekbot lihat bot mana saja yang online/masih hidup.
+
+Bot Commands:   
+Hanya berlaku untuk developer.
+
+⦿ /cekbot
+➠ lihat bot mana saja yang online/masih hidup.
 '''
 
     HELP_Filters = '''Filters
-    
-/filters Buat filter digrup 
+
+Filters Commands:   
+⦿ /filters
+➠ Buat filter digrup 
 Contoh: /filters hallo replay pesan.
-/stop Menghapus filter
+
+⦿ /stop
+➠ Menghapus filter
 Contoh: /stop hallo
 '''   
     
