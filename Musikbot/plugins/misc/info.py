@@ -72,17 +72,17 @@ font_path = "Musikbot/assets/hiroko.ttf"
 # --------------------------------------------------------------------------------- #
 
 
-INFO_TEXT = """**
+INFO_TEXT = """
 
 ᴜsᴇʀ ɪɴғᴏ :
-ᴜsᴇʀ ɪᴅ**`{}`
-**ғɪʀsᴛ ɴᴀᴍᴇ**{}
-**ʟᴀsᴛ ɴᴀᴍᴇ**{}
-**ᴜsᴇʀɴᴀᴍᴇ**`{}`
-**ᴍᴇɴᴛɪᴏɴ**{}
-**ʟᴀsᴛ sᴇᴇɴ**{}
-**ᴅᴄ ɪᴅ**`{}`
-**ʙɪᴏ**`{}`
+ᴜsᴇʀ ɪᴅ: `{}`
+ғɪʀsᴛ ɴᴀᴍᴇ: `{}`
+ʟᴀsᴛ ɴᴀᴍᴇ: `{}`
+ᴜsᴇʀɴᴀᴍᴇ: `{}`
+ᴍᴇɴᴛɪᴏɴ: '{}'
+ʟᴀsᴛ sᴇᴇɴ: '{}'
+ᴅᴄ ɪᴅ: `{}`
+ʙɪᴏ: `{}`
 """
 
 # --------------------------------------------------------------------------------- #
@@ -109,7 +109,7 @@ async def userstatus(user_id):
 
 
 
-@app.on_message(filters.command(["info", "userinfo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
+@app.on_message(filters.command(["info", "userinfo"], prefixes=["/", "!", "%", ",", ".", "@", "#"]))
 async def userinfo(_, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
