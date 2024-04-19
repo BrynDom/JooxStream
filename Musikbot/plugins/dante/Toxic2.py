@@ -2,7 +2,7 @@
 from time import sleep
 from . import (
     eor,
-    app.on_message,
+    app,
 )
 
 
