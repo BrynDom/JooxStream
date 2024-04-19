@@ -1,6 +1,6 @@
 
 from time import sleep
-from . import (
+from Musikbot import (
     eor,
     app,
 )
