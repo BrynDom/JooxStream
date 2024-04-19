@@ -1,27 +1,12 @@
 
-"""
-◈ Perintah Tersedia
-
-•`{i}ngentot`
-
-•`{i}goblok`
-
-•`{i}ngatain`
-
-•`{i}yatim`
-
-•`{i}komto`
-    Coba aja sendiri.
-"""
-
 from time import sleep
 from . import (
     eor,
-    dante_cmd,
+    app.on_message,
 )
 
 
-@dante_cmd(outgoing=True, pattern="ngentot")
+@app.on_message(outgoing=True, pattern="ngentot")
 async def _(event):
     xx = await event.eor("**EH ANAK NGENTODD!!**")
     sleep(1)
@@ -44,7 +29,7 @@ async def _(event):
     await event.eor("**HAHAHAHA CUIHH GOBLOKK**")
 
 
-@dante_cmd(outgoing=True, pattern="goblok")
+@app.on_message(outgoing=True, pattern="goblok")
 async def _(event):
     xx = await event.eor("**WOYY GOBLOK!!**")
     sleep(1)
@@ -67,7 +52,7 @@ async def _(event):
     await event.eor("**HAHAHAHA**")
 
 
-@dante_cmd(outgoing=True, pattern="ngatain")
+@app.on_message(outgoing=True, pattern="ngatain")
 async def _(event):
     xx = await event.eor("**BABI!!**")
     sleep(1)
@@ -89,7 +74,7 @@ async def _(event):
     sleep(1)
     await event.eor("**HAHAHAHA**")
 
-@dante_cmd(outgoing=True, pattern="yatim")
+@app.on_message(outgoing=True, pattern="yatim")
 async def _(event):
     xx = await event.eor("`HALLOOO ANAK YATIMM, Jangan Lupa Makan Yaa`")
     sleep(1)
@@ -111,7 +96,7 @@ async def _(event):
     sleep(1)
     await event.eor("`Tapi Bo'ong KWKWKW`")
 
-@dante_cmd(outgoing=True, pattern="komto")
+@app.on_message(outgoing=True, pattern="komto")
 async def _(event):
     xx = await event.eor("**EHHH EHH KONTULL**")
     sleep(1.5)
