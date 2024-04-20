@@ -1,9 +1,8 @@
 
 from time import sleep
-from . import (
-    eor,
-    app,
-)
+from pyrogram import Client, filters
+import random
+from Musikbot import app
 
 
 @app.on_message(outgoing=True, pattern="ngentot")
