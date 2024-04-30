@@ -6,7 +6,7 @@ from Musikbot import app
 
 #--------------------------
 
-MUST_JOIN = "MusicStreamMp3"
+MUST_JOIN = "JooxStream"
 #------------------------
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(app: Client, msg: Message):
@@ -23,7 +23,7 @@ async def must_join_channel(app: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply_photo(
-                    photo="https://mallucampaign.in/images/img_1708349297.jpg", caption=f"Silahkan bergabung dulu [Support]({link}) ,jika ingin menggunakan bot ini, jika sudah bergabung silahkan ulangi /start",
+                    photo="https://mallucampaign.in/images/img_1709026510.jpg", caption=f"Silahkan bergabung dulu [Support]({link}) ,jika ingin menggunakan bot ini, jika sudah bergabung silahkan ulangi /start",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
