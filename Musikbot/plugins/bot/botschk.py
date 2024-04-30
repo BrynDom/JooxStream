@@ -26,11 +26,11 @@ from datetime import datetime
 userbot = Userbot()
 
 
-BOT_LIST = ["Apple Stream", "Dante Stream", "String Sessions1", "String Sessions2"]
+BOT_LIST = ["Joox Music", "String Sessions1", "String Sessions2"]
 
 @app.on_message(filters.command("cekbot") & filters.user(OWNER_ID))
 async def bots_chk(_, message):
-    msg = await message.reply_photo(photo="https://mallucampaign.in/images/img_1709816527.jpg", caption="**ʟɪsᴛ ʙᴏᴛ ʏᴀɴɢ sᴜᴅᴀʜ ᴅɪʙᴜᴀᴛ ᴀᴋᴛɪғ ᴀᴘᴀ ᴛɪᴅᴀᴋ...**")
+    msg = await message.reply_photo(photo="https://mallucampaign.in/images/img_1709026510.jpg", caption="**ʟɪsᴛ ʙᴏᴛ ʏᴀɴɢ sᴜᴅᴀʜ ᴅɪʙᴜᴀᴛ ᴀᴋᴛɪғ ᴀᴘᴀ ᴛɪᴅᴀᴋ...**")
     response = "**ʟɪsᴛ ʙᴏᴛ ʏᴀɴɢ sᴜᴅᴀʜ ᴅɪʙᴜᴀᴛ ᴀᴋᴛɪғ ᴀᴘᴀ ᴛɪᴅᴀᴋ**\n\n"
     for bot_username in BOT_LIST:
         try:
