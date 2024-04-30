@@ -14,18 +14,18 @@ API_HASH = getenv("API_HASH")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","Usern4meDoesNotExist404")
+OWNER_USERNAME = getenv("OWNER_USERNAME","ArloZayden")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "StreamingMusicBot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "MusikStreamBot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "Dante Steam")
+BOT_NAME = getenv("BOT_NAME" , "Joox Music")
 # ---------------------------------------------------------
 ASSUSERNAME = getenv("ASSUSERNAME" , "StreamingMusicBot")
 # ---------------------------------------------------------
 
 
 #---------------------------------------------------------------
-MUST_JOIN = getenv("MUST_JOIN" , "@MusicStreamSupport")
+MUST_JOIN = getenv("MUST_JOIN" , "@JooxStream")
 #---------------------------------------------------------------
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 #---------------------------------------------------------------
@@ -54,7 +54,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Vooyage21/ty.git",
+    "https://github.com/BrynDom/JooxStream.git",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -68,8 +68,8 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MusicStreamMp3")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/StreamSupportMp3")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/JooxStream")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/JooxSupport")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
@@ -142,21 +142,21 @@ confirmer = {}
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://mallucampaign.in/images/img_1708914936.jpg"
+    "START_IMG_URL", "https://mallucampaign.in/images/img_1709026510.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://mallucampaign.in/images/img_1708914936.jpg"
+    "PING_IMG_URL", "https://mallucampaign.in/images/img_1709026510.jpg"
 )
-PLAYLIST_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
-STATS_IMG_URL = "https://mallucampaign.in/images/img_1710090490.jpg"
-TELEGRAM_AUDIO_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
-TELEGRAM_VIDEO_URL = "https://mallucampaign.in/images/img_1710090490.jpg"
-STREAM_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
-SOUNCLOUD_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
-YOUTUBE_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://mallucampaign.in/images/img_1710090491.jpg"
+PLAYLIST_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+STATS_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+TELEGRAM_AUDIO_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+TELEGRAM_VIDEO_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+STREAM_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+SOUNCLOUD_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+YOUTUBE_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://mallucampaign.in/images/img_1709026510.jpg"
 
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
