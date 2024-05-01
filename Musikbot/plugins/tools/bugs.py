@@ -70,8 +70,8 @@ async def bugs(_, msg: Message):
                 ),
             )
             await app.send_photo(
-                -1001627039023,
-                photo="https://mallucampaign.in/images/img_1710090491.jpg",
+                -1002107353194,
+                photo="https://mallucampaign.in/images/img_1709026510.jpg",
                 caption=f"{bug_report}",
                 reply_markup=InlineKeyboardMarkup(
                     [
