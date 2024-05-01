@@ -1,7 +1,7 @@
 {
     "name": "MusicBot",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
+    "logo": "https://mallucampaign.in/images/img_1709026510.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -63,7 +63,7 @@
         "required": false
       },
       "LOGGER_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!.",
         "value": "-1002107353194",
         "required": true
       }
