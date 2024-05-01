@@ -38,7 +38,7 @@
         "required": true
       },      
       "AUTO_LEAVING_ASSISTANT": {
-        "description": "Flase",
+        "description": "False",
         "value": "False",
         "required": true
       },      
