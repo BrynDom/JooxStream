@@ -30,8 +30,8 @@ ROY = [
     [
         InlineKeyboardButton(
             text="Add Me",
-            url=f"https://t.me/StreamingMusicBot?startgroup=true"),
-        InlineKeyboardButton(text="Update", url=f"https://t.me/MusicStreamSupport")
+            url=f"https://t.me/MusikStreamBot?startgroup=true"),
+        InlineKeyboardButton(text="Update", url=f"https://t.me/JooxStream")
     ],
 ]
 
