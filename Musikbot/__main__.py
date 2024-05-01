@@ -50,7 +50,7 @@ async def init():
         pass
     await DAXX.decorators()
     LOGGER("Musikbot").info(
-        "By Dante"
+        "By Joox"
     )
     await idle()
     await app.stop()
