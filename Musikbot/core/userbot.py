@@ -72,8 +72,8 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("MusicStreamSupport")
-                await self.one.join_chat("MusicStreamSupport")
+                await self.two.join_chat("JooxStream")
+                await self.one.join_chat("JooxStream")
             except:
                 pass
             assistants.append(2)
