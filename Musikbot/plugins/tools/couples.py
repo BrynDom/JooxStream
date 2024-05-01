@@ -14,7 +14,7 @@ from Musikbot.mongo.couples_db import _get_image, get_couple
 POLICE = [
     [
         InlineKeyboardButton(
-            text="Owners", url=f"https://t.me/Usern4meDoesNotExist404",
+            text="Owners", url=f"https://t.me/ArloZayden",
         ),
     ],
 ]
