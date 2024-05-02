@@ -91,7 +91,7 @@ class temp:
 
 
 
-def circle(pfp, size=(500, 500), brightness_factor=10):
+def circle(pfp, size=(325, 325), brightness_factor=10):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     pfp = ImageEnhance.Brightness(pfp).enhance(brightness_factor)
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
