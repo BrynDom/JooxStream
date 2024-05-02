@@ -107,7 +107,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     background = Image.open("Musikbot/assets/wel2.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp, brightness_factor=brightness_factor) 
-    pfp = pfp.resize((250, 250))
+    pfp = pfp.resize((300, 300))
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('Musikbot/assets/font.ttf', size=70)
     welcome_font = ImageFont.truetype('Musikbot/assets/font.ttf', size=61)
@@ -193,7 +193,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**Hi selamat Datang**
+**Hi Selamat Datang**
 
 **Nama :** {user.mention}
 **Id :** `{user.id}`
