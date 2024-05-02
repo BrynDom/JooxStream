@@ -91,10 +91,10 @@ class temp:
 
 
 
-def circle(pfp, size=(125, 125), brightness_factor=10):
+def circle(pfp, size=(500, 500), brightness_factor=10):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     pfp = ImageEnhance.Brightness(pfp).enhance(brightness_factor)
-    bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
+    bigsize = (pfp.size[0] * 1, pfp.size[1] * 1)
     mask = Image.new("L", bigsize, 0)
     draw = ImageDraw.Draw(mask)
     draw.ellipse((0, 0) + bigsize, fill=255)
