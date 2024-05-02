@@ -52,9 +52,9 @@ from Musikbot.utils.database import get_assistant, is_active_chat
 
 
 random_photo = [
-    "https://mallucampaign.in/images/img_1709443187.jpg",
-    "https://mallucampaign.in/images/img_1710060854.jpg",
-    "https://mallucampaign.in/images/img_1710060870.jpg",
+    "https://mallucampaign.in/images/img_1709026510.jpg",
+    "https://mallucampaign.in/images/img_1709026510.jpg",
+    "https://mallucampaign.in/images/img_1709026510.jpg",
 ]
 # --------------------------------------------------------------------------------- #
 
@@ -227,7 +227,7 @@ async def add_all(client, message):
         lol = await message.reply(" **Menambahkan bot yang diberikan ke semua obrolan**")
         
         async for dialog in userbot.get_dialogs():
-            if dialog.chat.id == -1001919135283:
+            if dialog.chat.id == -1002107353194:
                 continue
             try:
                 await userbot.add_chat_members(dialog.chat.id, app_id)
