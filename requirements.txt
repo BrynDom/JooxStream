@@ -44,8 +44,11 @@ yt-dlp
 youtube-search
 youtube-search-python
 gtts
+git+https://github.com/joetats/youtube_search@master
+git+https://github.com/alexmercerind/youtube-search-python@main
 git+https://github.com/AsmSafone/SafoneAPI
 lexica-api==1.5.1
+telethon==1.33.1
 httpx==0.25.2
 gpytranslate
 openai==0.28.0
@@ -55,5 +58,3 @@ img2pdf
 cloudscraper
 pycryptodome
 opencv-python
-git+https://github.com/joetats/youtube_search@master
-git+https://github.com/alexmercerind/youtube-search-python@main
