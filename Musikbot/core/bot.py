@@ -1,53 +1,55 @@
-from pyrogram import Client, errors
-from pyrogram.enums import ChatMemberStatus, ParseMode
+# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
 
+""""
+TheTeamAlexa is a project of Telegram bots with variety of purposes.
+Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
+
+This program is free software: you can redistribute it and can modify
+as you want or you can collabe if you have new ideas.
+"""
+
+
+import sys
+
+from pyrogram import Client
 import config
-
 from ..logging import LOGGER
+from pyrogram.enums import ChatMemberStatus
 
 
-class DAXX(Client):
+class VIP(Client):
     def __init__(self):
-        LOGGER(__name__).info(f"Memulai bot...")
         super().__init__(
-            name="DAXXMUSIC",
+            "VIPMUSIC",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
             in_memory=True,
-            max_concurrent_transmissions=7,
         )
+        LOGGER(__name__).info(f"Starting Bot...")
 
     async def start(self):
         await super().start()
-        self.id = self.me.id
-        self.name = self.me.first_name + " " + (self.me.last_name or "")
-        self.username = self.me.username
-        self.mention = self.me.mention
-
+        get_me = await self.get_me()
+        self.username = get_me.username
+        self.id = get_me.id
+        self.mention = get_me.mention
         try:
             await self.send_message(
-                chat_id=config.LOGGER_ID,
-                text=f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b><u>\n\nɪᴅ : <code>{self.id}</code>\nɴᴀᴍᴇ : {self.name}\nᴜsᴇʀɴᴀᴍᴇ : @{self.username}",
+                config.LOG_GROUP_ID, "» ᴍᴜsɪᴄ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ, ᴡᴀɪᴛɪɴɢ ғᴏʀ ᴀssɪsᴛᴀɴᴛ..."
             )
-        except (errors.ChannelInvalid, errors.PeerIdInvalid):
+        except:
             LOGGER(__name__).error(
-                "Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel."
+                "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
             )
-            exit()
-        except Exception as ex:
-            LOGGER(__name__).error(
-                f"Bot has failed to access the log group/channel.\n  Reason : {type(ex).__name__}."
-            )
-            exit()
-
-        a = await self.get_chat_member(config.LOGGER_ID, self.id)
+            sys.exit()
+        a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
         if a.status != ChatMemberStatus.ADMINISTRATOR:
-            LOGGER(__name__).error(
-                "Silakan promosikan bot Anda sebagai admin di grup/saluran log Anda."
-            )
-            exit()
-        LOGGER(__name__).info(f"Music Bot Started as {self.name}")
-
-    async def stop(self):
-        await super().stop()
+            LOGGER(__name__).error("Please promote Bot as Admin in Logger Group")
+            sys.exit()
+        if get_me.last_name:
+            self.name = get_me.first_name + " " + get_me.last_name
+        else:
+            self.name = get_me.first_name
+        LOGGER(__name__).info(f"MusicBot Started as {self.name}")
